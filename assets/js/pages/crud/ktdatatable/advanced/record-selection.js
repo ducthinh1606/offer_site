@@ -97,66 +97,8 @@ var KTDatatableRecordSelectionDemo = function() {
 	        autoHide: false,
             template: function() {
                 return '\
-                    <div class="dropdown dropdown-inline">\
-                        <a href="javascript:;" class="btn btn-sm btn-clean btn-icon mr-2" data-toggle="dropdown">\
-                            <span class="svg-icon svg-icon-md">\
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">\
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\
-                                        <rect x="0" y="0" width="24" height="24"/>\
-                                        <path d="M5,8.6862915 L5,5 L8.6862915,5 L11.5857864,2.10050506 L14.4852814,5 L19,5 L19,9.51471863 L21.4852814,12 L19,14.4852814 L19,19 L14.4852814,19 L11.5857864,21.8994949 L8.6862915,19 L5,19 L5,15.3137085 L1.6862915,12 L5,8.6862915 Z M12,15 C13.6568542,15 15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9 C10.3431458,9 9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 Z" fill="#000000"/>\
-                                    </g>\
-                                </svg>\
-                            </span>\
-                        </a>\
-                        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">\
-                            <ul class="navi flex-column navi-hover py-2">\
-                                <li class="navi-header font-weight-bolder text-uppercase font-size-xs text-primary pb-2">\
-                                    Choose an action:\
-                                </li>\
-                                <li class="navi-item">\
-                                    <a href="#" class="navi-link">\
-                                        <span class="navi-icon"><i class="la la-print"></i></span>\
-                                        <span class="navi-text">Print</span>\
-                                    </a>\
-                                </li>\
-                                <li class="navi-item">\
-                                    <a href="#" class="navi-link">\
-                                        <span class="navi-icon"><i class="la la-copy"></i></span>\
-                                        <span class="navi-text">Copy</span>\
-                                    </a>\
-                                </li>\
-                                <li class="navi-item">\
-                                    <a href="#" class="navi-link">\
-                                        <span class="navi-icon"><i class="la la-file-excel-o"></i></span>\
-                                        <span class="navi-text">Excel</span>\
-                                    </a>\
-                                </li>\
-                                <li class="navi-item">\
-                                    <a href="#" class="navi-link">\
-                                        <span class="navi-icon"><i class="la la-file-text-o"></i></span>\
-                                        <span class="navi-text">CSV</span>\
-                                    </a>\
-                                </li>\
-                                <li class="navi-item">\
-                                    <a href="#" class="navi-link">\
-                                        <span class="navi-icon"><i class="la la-file-pdf-o"></i></span>\
-                                        <span class="navi-text">PDF</span>\
-                                    </a>\
-                                </li>\
-                            </ul>\
-                        </div>\
-                    </div>\
-                    <a href="javascript:;" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details">\
-                        <span class="svg-icon svg-icon-md">\
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">\
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\
-                                    <rect x="0" y="0" width="24" height="24"/>\
-                                    <path d="M8,17.9148182 L8,5.96685884 C8,5.56391781 8.16211443,5.17792052 8.44982609,4.89581508 L10.965708,2.42895648 C11.5426798,1.86322723 12.4640974,1.85620921 13.0496196,2.41308426 L15.5337377,4.77566479 C15.8314604,5.0588212 16,5.45170806 16,5.86258077 L16,17.9148182 C16,18.7432453 15.3284271,19.4148182 14.5,19.4148182 L9.5,19.4148182 C8.67157288,19.4148182 8,18.7432453 8,17.9148182 Z" fill="#000000" fill-rule="nonzero"\ transform="translate(12.000000, 10.707409) rotate(-135.000000) translate(-12.000000, -10.707409) "/>\
-                                    <rect fill="#000000" opacity="0.3" x="5" y="20" width="15" height="2" rx="1"/>\
-                                </g>\
-                            </svg>\
-                        </span>\
-                    </a>\
+                   
+                  
                     <a href="javascript:;" class="btn btn-sm btn-clean btn-icon" title="Delete">\
                         <span class="svg-icon svg-icon-md">\
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">\
