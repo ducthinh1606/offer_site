@@ -43,7 +43,7 @@
       <!--begin::Header Mobile-->
       <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
          <!--begin::Logo-->
-         <a href="index.php">
+         <a href="index.html">
          <img alt="Logo" src="assets/media/logos/logo-light.png" />
          </a>
          <!--end::Logo-->
@@ -81,7 +81,7 @@
                <!--begin::Brand-->
                <div class="brand flex-column-auto" id="kt_brand">
                   <!--begin::Logo-->
-                  <a href="index.php" class="brand-logo">
+                  <a href="index.html" class="brand-logo">
                   <img alt="Logo" src="assets/media/logos/logo-light.png" />
                   </a>
                   <!--end::Logo-->
@@ -109,7 +109,7 @@
                      <!--begin::Menu Nav-->
                      <ul class="menu-nav">
                         <li class="menu-item menu-item" aria-haspopup="true">
-                           <a href="index.php" class="menu-link">
+                           <a href="index.html" class="menu-link">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -130,7 +130,7 @@
                         </li>
                         <li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
 							
-                           <a href="history.php" class="menu-link menu-toggle">
+                           <a href="history.html" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -148,7 +148,7 @@
                         </li>
 												   
 							<li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="account.php" class="menu-link menu-toggle">
+                           <a href="account.html" class="menu-link menu-toggle">
 						 
                        
                               <span class="svg-icon menu-icon">
@@ -172,7 +172,7 @@
                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
                         <li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="ssh_manager.php" class="menu-link menu-toggle">
+                           <a href="ssh_manager.html" class="menu-link menu-toggle">
 						   
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Bucket.svg-->
@@ -190,7 +190,7 @@
                            </a>
                         </li>
                        <li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="ssh247.php" class="menu-link menu-toggle">
+                           <a href="ssh247.html" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Code/Compiling.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -230,7 +230,7 @@
                               <i class="menu-arrow"></i>
                               <ul class="menu-subnav">
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="member_analytics.php" class="menu-link menu-toggle">
+                                    <a href="member_analytics.html" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -239,7 +239,7 @@
                                     </a>
                                  </li>
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="app_analytics.php" class="menu-link menu-toggle">
+                                    <a href="app_analytics.html" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -274,7 +274,7 @@
                               <i class="menu-arrow"></i>
                               <ul class="menu-subnav">
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="network_manager.php" class="menu-link menu-toggle">
+                                    <a href="network_manager.html" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -283,7 +283,7 @@
                                     </a>
                                  </li>
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="app_manager.php" class="menu-link menu-toggle">
+                                    <a href="app_manager.html" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -398,9 +398,99 @@
                   <div class="d-flex flex-column-fluid">
                      <!--begin::Container-->
                      <div class="container-fluid">
-                        <!--begin::History-->
+                        <!--begin::Member List-->
                       
-						 
+						 <div class="card card-custom">
+                           <div class="card-header">
+                              <div class="card-title">
+											<span class="card-icon">
+												<i class="flaticon2-supermarket text-primary"></i>
+											</span>
+                                 <h3 class="card-label">Quản lý người dùng</h3>
+                                 
+                              </div>
+                              <div class="card-toolbar">
+                                 <!--begin::Dropdown-->
+                         
+                                
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Thêm Người Dùng
+</button>
+				<!-- Modal-->
+<div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thêm người dùng mới</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i aria-hidden="true" class="ki ki-close"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+<div class="modal-body pd-20 pd-sm-30">
+                                    <h5 class="tx-18 tx-sm-20 mg-b-20">Add new Member</h5>
+                                    <hr>
+                                    <h5>Nhập tên</h5>
+                                    <div class="form-group">
+                                        <input type="text" id="mem_name" class="form-control" placeholder="Tên nhân viên" aria-label="" aria-describedby="basic-addon1">
+                                    </div>
+                                    <h5>Username</h5>
+                                    <div class="form-group">
+                                        <input type="text" id="mem_username" class="form-control" placeholder="username" aria-label="" aria-describedby="basic-addon1">
+                                    </div>
+                                    <h5>Password</h5>
+                                    <div class="form-group">
+                                        <input type="text" id="mem_pass" class="form-control" placeholder="password" aria-label="" aria-describedby="basic-addon1">
+                                    </div>
+                                    <h5>Phone</h5>
+                                    <div class="form-group">
+                                        <input type="text" id="mem_phone" class="form-control" placeholder="phone number" aria-label="" aria-describedby="basic-addon1">
+                                    </div>
+								 <h5>Nhóm tài khoản</h5>
+                                   <div class="dropdown">
+										<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Select Role
+										</button>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="#">Member</a>
+											<a class="dropdown-item" href="#">Administrator</a>
+											<a class="dropdown-item" href="#">Manager</a>
+										</div>
+									</div>
+                                </div>
+                                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary font-weight-bold">Add New Member</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+								  
+								  
+                              </div>
+                           </div>
+                           <div class="card-body">
+                              <!--begin: Datatable-->
+                              <table class="table table-bordered table-hover table-checkable" id="member_datatable" style="margin-top: 13px !important">
+                                 <thead>
+                                 <tr>
+                                    <th>Tài Khoản</th>
+                                    <th>Họ Tên</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Giới Tính</th>
+									<th>Ngày Sinh</th>
+									<th>Actions</th>
+                                 </tr>
+                                 </thead>
+                              </table>
+                              <!--end: Datatable-->
+                           </div>
+                        </div>
 						 
 						 
 						 
@@ -408,7 +498,7 @@
 						 
 						 
                        						 
-                        <!--end::History-->
+                        <!--end::Member List-->
                      </div>
                      <!--end::Container-->
                   </div>
