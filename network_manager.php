@@ -13,6 +13,8 @@
       <!--begin::Page Vendors Styles(used by this page)-->
       <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
       <!--end::Page Vendors Styles-->
+
+      <link href="assets/plugins/custom/datatables/datatables.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
       <!--begin::Global Theme Styles(used by all pages)-->
       <link href="assets/plugins/global/plugins.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
       <link href="assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
@@ -43,7 +45,7 @@
       <!--begin::Header Mobile-->
       <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
          <!--begin::Logo-->
-         <a href="index.html">
+         <a href="index.php">
          <img alt="Logo" src="assets/media/logos/logo-light.png" />
          </a>
          <!--end::Logo-->
@@ -81,7 +83,7 @@
                <!--begin::Brand-->
                <div class="brand flex-column-auto" id="kt_brand">
                   <!--begin::Logo-->
-                  <a href="index.html" class="brand-logo">
+                  <a href="index.php" class="brand-logo">
                   <img alt="Logo" src="assets/media/logos/logo-light.png" />
                   </a>
                   <!--end::Logo-->
@@ -109,7 +111,7 @@
                      <!--begin::Menu Nav-->
                      <ul class="menu-nav">
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="index.html" class="menu-link menu-toggle">
+                           <a href="index.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -129,7 +131,7 @@
                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="history.html" class="menu-link menu-toggle">
+                           <a href="history.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -146,7 +148,7 @@
                            </a>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="account.html" class="menu-link menu-toggle">
+                           <a href="account.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -168,7 +170,7 @@
                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="ssh_manager.html" class="menu-link menu-toggle">
+                           <a href="ssh_manager.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Bucket.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -185,7 +187,7 @@
                            </a>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="ssh247.html" class="menu-link menu-toggle">
+                           <a href="ssh247.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Code/Compiling.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -226,7 +228,7 @@
                               <i class="menu-arrow"></i>
                               <ul class="menu-subnav">
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="member_analytics.html" class="menu-link menu-toggle">
+                                    <a href="member_analytics.php" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -235,7 +237,7 @@
                                     </a>
                                  </li>
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="app_analytics.html" class="menu-link menu-toggle">
+                                    <a href="app_analytics.php" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -280,7 +282,7 @@
                                     </a>
                                  </li>
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="app_manager.html" class="menu-link menu-toggle">
+                                    <a href="app_manager.php" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -292,7 +294,7 @@
                            </div>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="member_manager.html" class="menu-link menu-toggle">
+                           <a href="member_manager.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Files/Pictures1.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -395,194 +397,103 @@
                   <!--begin::Entry-->
                   <div class="d-flex flex-column-fluid">
                      <!--begin::Container-->
-                     <div class="container-fluid">
-                        <!--begin::Dashboard-->
-                        <!--begin::Row-->
-                        <div class="row">
-							<div class="col-xl-4">
-                              <div class="row">
-                                 <div class="col-xl-6">
-                                    <!--begin::Tiles Widget 11-->
-                                    <div class="card card-custom bg-danger gutter-b ribbon ribbon-clip ribbon-right" style="height: 150px">
-                                       <div class="ribbon-target" style="top: 12px;">
-                                          <span class="ribbon-inner bg-warning"></span>Today
-                                       </div>
-                                       <div class="card-body">
-                                          <span class="svg-icon svg-icon-3x svg-icon-white ml-n2">
-                                             <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
-                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                   <rect x="0" y="0" width="24" height="24" />
-                                                   <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
-                                                   <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
-                                                </g>
-                                             </svg>
-                                             <!--end::Svg Icon-->
-                                          </span>
-                                          <div class="text-inverse-success font-weight-bolder font-size-h2 mt-3">$120</div>
-                                          <a href="#" class="text-inverse-success font-weight-bold font-size-lg mt-1">Thu nhập</a>
-                                       </div>
-                                    </div>
-                                    <!--end::Tiles Widget 11-->
-                                 </div>
-                                 <div class="col-xl-6">
-                                    <!--begin::Tiles Widget 12-->
-                                    <div class="card card-custom gutter-b" style="height: 150px">
-                                       <div class="card-body">
-                                          <span class="svg-icon svg-icon-3x svg-icon-success">
-                                             <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
-                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                   <polygon points="0 0 24 0 24 24 0 24" />
-                                                   <path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                                   <path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
-                                                </g>
-                                             </svg>
-                                             <!--end::Svg Icon-->
-                                          </span>
-                                          <div class="text-dark font-weight-bolder font-size-h2 mt-3">2,600</div>
-                                          <a href="#" class="text-muted text-hover-primary font-weight-bold font-size-lg mt-1">Tài Khoản</a>
-                                       </div>
-                                    </div>
-                                    <!--end::Tiles Widget 12-->
-                                 </div>
-								  <div class="col-xl-12">
-									<div class="card card-custom bgi-no-repeat gutter-b" style="height: 180px; background-color: #1B283F; background-position: calc(100% + 0.5rem) bottom; background-size: 25% auto; background-image: url(assets/media/svg/humans/custom-1.svg)">
-											<!--begin::Body-->
-											<div class="card-body d-flex align-items-center">
-												<div class="py-2">
-													<h3 class="text-white font-weight-bolder mb-3">Theo Dõi Chấm Công</h3>
-													<p class="text-white font-size-sm">Bảng chấm công sẽ ghi lại toàn bộ khoảng thời gian
-													<br /> làm việc, nghỉ việc, nghĩ lễ
-													<br /> của nhân viên</p>
-														<a href='#' class="btn btn-link btn-link-warning font-weight-bold">Start Now
-														<span class="svg-icon svg-icon-lg svg-icon-warning">
-															<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-															<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																	<polygon points="0 0 24 0 24 24 0 24" />
-																	<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																	<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																</g>
-															</svg>
-															<!--end::Svg Icon-->
-														</span></a>
-												</div>
-												
-											</div>
-											<!--end::Body-->
-										</div>
-								  </div>
+                     <div class="container">
+                        <!--begin::Card-->
+                        <div class="card card-custom">
+                           <div class="card-header">
+                              <div class="card-title">
+											<span class="card-icon">
+												<i class="flaticon2-supermarket text-primary"></i>
+											</span>
+                                 <h3 class="card-label">Danh sách tài khoản</h3>
 
                               </div>
-							   								  
+                              <div class="card-toolbar">
+                                 <!--begin::Dropdown-->
+
+                                 <!--begin::Button-->
+                                 <a href="#" class="btn btn-primary font-weight-bolder" data-toggle='modal' data-target='#addNetwork' >
+											<span class="svg-icon svg-icon-md">
+												<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<rect x="0" y="0" width="24" height="24" />
+														<circle fill="#000000" cx="9" cy="15" r="6" />
+														<path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3" />
+													</g>
+												</svg>
+                                               <!--end::Svg Icon-->
+											</span>New Record</a>
+                                 <!--end::Button-->
+                              </div>
                            </div>
-                           <div class="col-xl-8">
-                              <!--begin::Card-->
-                              <!--begin::Card-->
-                              <div class="card card-custom gutter-b">
-                                 <div class="card-header">
-                                    <div class="card-title">
-                                       <h3 class="card-label">Thống Kê Tình Hình Làm Việc Theo Ngày</h3>
-                                    </div>
-									 <div class="card-toolbar">
-								<div data-label="datepick">
-							  <div class="row">
-								<div class="col-4">
-								  <input type="text" id="dateFrom" class="form-control" placeholder="From">
-								</div><!-- col -->
-								<div class="col-4" >
-								  <input type="text" id="dateTo" class="form-control" placeholder="To">
-								</div><!-- col -->
-								  
-								 
-								<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" id='submit'>Submit</button>
-							
-
-
-							  </div><!-- row -->
-										  
-
-							</div>
-												</div>
-                                 </div>
-                                 <div class="card-body">
-                                    <canvas id="chart1" height=70 ></canvas>
-                                 </div>
-                              </div>
-                              <!--end::Card-->
-                           </div>
-                           
-                        </div>
-                        <!--end::Row-->
-                        <!--begin::Row-->
-                        <div class="row">
-                           <div class="col-xl-4">
-                              <!--begin::Mixed Widget 14-->
-                              <div class="card card-custom card-stretch gutter-b">
-                                 <!--begin::Header-->
-                                 <div class="card-header border-0 pt-5">
-                                    <h3 class="card-title font-weight-bolder">Thống Kê Theo NetWork</h3>
-                                    <div class="card-toolbar">
-                                       <ul class="nav nav-pills nav-pills-sm nav-dark-75">
-                                          <li class="nav-item">
-                                             <a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_1_1">Month</a>
-                                          </li>
-                                          <li class="nav-item">
-                                             <a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_1_2">Week</a>
-                                          </li>
-                                          <li class="nav-item">
-                                             <a class="nav-link py-2 px-4 active" data-toggle="tab" href="#kt_tab_pane_1_3">Day</a>
-                                          </li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <!--end::Header-->
-                                 <!--begin::Body-->
-                                 <div class="card-body d-flex flex-column">
-                                    <span style=" position: absolute;
-                                       left: 50%;
-                                       top: 50%;
-                                       transform: translate(-50%, -100%);
-                                       font-weight: bold;" >$901</span>
-                                    <canvas id="chartDonut"></canvas>
-                                 </div>
-                                 <!--end::Body-->
-                              </div>
-                              <!--end::Mixed Widget 14-->
-                           </div>
-                           <div class="col-lg-8">
-                              <!--begin::Advance Table Widget 4-->
-                              <div class="card card-custom gutter-b">
-                                 <div class="card-header">
-                                    <div class="card-title">
-                                       <h3 class="card-label">Thống Kê Theo App</h3>
-                                    </div>
-									 <div class="card-toolbar">
-                                       <ul class="nav nav-pills nav-pills-sm nav-dark-75">
-                                          <li class="nav-item">
-                                             <a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_1_1">Month</a>
-                                          </li>
-                                          <li class="nav-item">
-                                             <a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_1_2">Week</a>
-                                          </li>
-                                          <li class="nav-item">
-                                             <a class="nav-link py-2 px-4 active" data-toggle="tab" href="#kt_tab_pane_1_3">Day</a>
-                                          </li>
-                                       </ul>
-                                    </div>
-									 
-                                 </div>
-                                 <div class="card-body">
-                                    <canvas id="chart2" height=300 ></canvas>
-                                 </div>
-                              </div>
-                              <!--end::Advance Table Widget 4-->
+                           <div class="card-body">
+                              <!--begin: Datatable-->
+                              <table class="table table-bordered table-hover table-checkable" id="kt_datatable" style="margin-top: 13px !important">
+                                 <thead>
+                                 <tr>
+                                    <th>Network</th>
+                                    <th>Actions</th>
+                                 </tr>
+                                 </thead>
+                              </table>
+                              <!--end: Datatable-->
                            </div>
                         </div>
-                        <!--end::Row-->
-						 
-                        <!--end::Dashboard-->
+                        <!--end::Card-->
+
+                        <!-- Modal -->
+                        <div id="addNetwork" class="modal fade" role="dialog">
+                           <div class="modal-dialog">
+
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h4 class="modal-title">Add new Network</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="form-group">
+                                       <label for="network" >Network</label>
+                                       <input type="text" class="form-control" id="network_name" placeholder="Enter Network name" required>
+                                    </div>
+                                    <div class="modal-footer">
+                                       <button type="button" class="btn btn-success btn-sm" id="btn_add">Add</button>
+                                       <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </div>
+                        </div>
+
+
+
+                        <div id="updateModal" class="modal fade" role="dialog">
+                           <div class="modal-dialog">
+
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h4 class="modal-title">Edit Network</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="form-group">
+                                       <label for="network" >Network</label>
+                                       <input type="text" class="form-control" id="network" placeholder="Enter Network name" required>
+                                    </div>
+                                    <div class="modal-footer">
+                                       <input type="hidden" id="network_id" value="0">
+                                       <button type="button" class="btn btn-success btn-sm" id="btn_save">Save</button>
+                                       <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </div>
+                        </div>
+
                      </div>
                      <!--end::Container-->
                   </div>
@@ -833,6 +744,9 @@
       <!--end::Scrolltop-->
       <!--end::Demo Panel-->
       <!--begin::Global Theme Bundle(used by all pages)-->
+      <script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+
+
       <script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
       <script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
       <script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
@@ -841,440 +755,9 @@
       <script src="assets/plugins/custom/flot/flot.bundle.js?v=7.0.5"></script>
       <!--end::Page Vendors-->
       <script src="lib/chart.js/Chart.bundle.min.js"></script>
-      <script>
-         var ctxColor1 ="#187de4";
-         var ctxColor2 = "#f64e60";
-         
-         var ctxLabel = [
-         	"1/6",
-         	"2/6",
-         	"3/6",
-         	"4/6",
-         	"5/6",
-         	"6/6",
-         	"7/6",
-         	"8/6",
-         	"9/6",
-         	"10/6",
-         	"11/6",
-         	"12/6",
-         	"13/6",
-         	"14/6",
-         	"15/6",
-         	"16/6",
-         	"17/6",
-         	"18/6",
-         	"19/6",
-         	"20/6",
-         	"21/6",
-         	"22/6",
-         	"23/6",
-         	"24/6",
-         	"25/6",
-         	"26/6",
-         	"27/6",
-         	"28/6",
-         	"29/6",
-         	"30/6",
-         ]; //Ngày tháng
-         var data1 = [127, 125, 143, 154, 131, 166, 180, 175, 168, 184, 204, 41.66, 161, 191, 172, 192, 169, 157, 153, 147, 127.2, 48, 47, 55, 63, 66, 0, 0, 0, 0];
-         var data2 = [2208, 1661, 1848, 1800, 1630, 1985, 2250, 2133, 2321, 2041, 1060, 1445, 1736, 2073, 1845, 1728, 1987, 1967, 1467, 1988, 1496, 1341, 1397, 656, 1101, 1223, 0, 0, 0, 0];
-         
-         
-         var randomScalingFactor = function () {
-          return (Math.random() > 0.5 ? 1.0 : 1.0) * Math.round(Math.random() * 100);
-         };
-         
-         // draws a rectangle with a rounded top
-         Chart.helpers.drawRoundedTopRectangle = function (
-          ctx,
-          x,
-          y,
-          width,
-          height,
-          radius
-         ) {
-          ctx.beginPath();
-          ctx.moveTo(x + radius, y);
-          // top right corner
-          ctx.lineTo(x + width - radius, y);
-          ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
-          // bottom right	corner
-          ctx.lineTo(x + width, y + height);
-          // bottom left corner
-          ctx.lineTo(x, y + height);
-          // top left
-          ctx.lineTo(x, y + radius);
-          ctx.quadraticCurveTo(x, y, x + radius, y);
-          ctx.closePath();
-         };
-         
-         Chart.elements.RoundedTopRectangle = Chart.elements.Rectangle.extend({
-          draw: function () {
-            var ctx = this._chart.ctx;
-            var vm = this._view;
-            var left, right, top, bottom, signX, signY, borderSkipped;
-            var borderWidth = vm.borderWidth;
-         
-            if (!vm.horizontal) {
-              // bar
-              left = vm.x - vm.width / 2;
-              right = vm.x + vm.width / 2;
-              top = vm.y;
-              bottom = vm.base;
-              signX = 1;
-              signY = bottom > top ? 1 : -1;
-              borderSkipped = vm.borderSkipped || "bottom";
-            } else {
-              // horizontal bar
-              left = vm.base;
-              right = vm.x;
-              top = vm.y - vm.height / 2;
-              bottom = vm.y + vm.height / 2;
-              signX = right > left ? 1 : -1;
-              signY = 1;
-              borderSkipped = vm.borderSkipped || "left";
-            }
-         
-            // Canvas doesn't allow us to stroke inside the width so we can
-            // adjust the sizes to fit if we're setting a stroke on the line
-            if (borderWidth) {
-              // borderWidth shold be less than bar width and bar height.
-              var barSize = Math.min(Math.abs(left - right), Math.abs(top - bottom));
-              borderWidth = borderWidth > barSize ? barSize : borderWidth;
-              var halfStroke = borderWidth / 2;
-              // Adjust borderWidth when bar top position is near vm.base(zero).
-              var borderLeft =
-                left + (borderSkipped !== "left" ? halfStroke * signX : 0);
-              var borderRight =
-                right + (borderSkipped !== "right" ? -halfStroke * signX : 0);
-              var borderTop = top + (borderSkipped !== "top" ? halfStroke * signY : 0);
-              var borderBottom =
-                bottom + (borderSkipped !== "bottom" ? -halfStroke * signY : 0);
-              // not become a vertical line?
-              if (borderLeft !== borderRight) {
-                top = borderTop;
-                bottom = borderBottom;
-              }
-              // not become a horizontal line?
-              if (borderTop !== borderBottom) {
-                left = borderLeft;
-                right = borderRight;
-              }
-            }
-         
-            // calculate the bar width and roundess
-            var barWidth = Math.abs(left - right);
-            var roundness = this._chart.config.options.barRoundness || 0.5;
-            var radius = barWidth * roundness * 1;
-         
-            // keep track of the original top of the bar
-            var prevTop = top;
-         
-            // move the top down so there is room to draw the rounded top
-            top = prevTop + radius;
-            var barRadius = top - prevTop;
-         
-            ctx.beginPath();
-            ctx.fillStyle = vm.backgroundColor;
-            ctx.strokeStyle = vm.borderColor;
-            ctx.lineWidth = borderWidth;
-         
-            // draw the rounded top rectangle
-            Chart.helpers.drawRoundedTopRectangle(
-              ctx,
-              left,
-              top - barRadius + 1,
-              barWidth,
-              bottom - prevTop,
-              barRadius
-            );
-         
-            ctx.fill();
-            if (borderWidth) {
-              ctx.stroke();
-            }
-         
-            // restore the original top value so tooltips and scales still work
-            top = prevTop;
-          }
-         });
-         
-         Chart.defaults.roundedBar = Chart.helpers.clone(Chart.defaults.bar);
-         
-         Chart.controllers.roundedBar = Chart.controllers.bar.extend({
-          dataElementType: Chart.elements.RoundedTopRectangle
-         });
-         
-         
-         
-         
-         var barDataset = {
-         	type: "roundedBar",
-         	label: "Thu Nhập",
-         	yAxisID: "y-axis-1",
-         	data: data1,
-         	backgroundColor: ctxColor1,
-         	borderColor: ctxColor1,
-         	borderWidth: .5,
-         	
-         };
-         //data thu nhập
-         
-         var dataset = [];
-         dataset.push(barDataset);
-         //đẩy data vào mảng dataset
-         
-         
-         var lineDataset = {
-         	type: "line",
-         	label: "Account",
-         	yAxisID: "y-axis-2",
-         	data: data2,
-         	backgroundColor: ctxColor2,
-         	borderColor: ctxColor2,
-         	fill: false,
-         	borderWidth: 2,
-         };
-         //data số tài khoản
-         
-         dataset.push(lineDataset);
-         
-         //đẩy data vào mảng dataset
-         
-         console.log(dataset);
-         //in console ra mảng để kiểm tra cho dễ
-         
-         var ctx1 = document.getElementById("chart1").getContext("2d");
-         new Chart(ctx1, {
-         	type: "roundedBar",
-         	data: {
-         		labels: ctxLabel,
-         		datasets: dataset,
-         	},
-         	options: {
-         		legend: {
-         			display: false,
-         		},
-         		scales: {
-         			yAxes: [
-         				{
-         					id: "y-axis-1",
-         					position: "left",
-         					type: "linear",
-         					ticks: {
-         						beginAtZero: true,
-         					},
-         				},
-         				{
-         					id: "y-axis-2",
-         					gridLines: {
-         						color: "rgba(0, 0, 0, 0)",
-         					},
-         					position: "right",
-         					type: "linear",
-         					ticks: {
-         						beginAtZero: true,
-         					},
-         				},
-         			],
-         			xAxes: [
-         				{
-         					gridLines: {
-         						display: true,
-         					},
-         					scaleLabel: {
-         						display: true,
-         					},
-         				},
-         			],
-         		},
-         	},
-         });
-         
-         
-         
-      </script>
-      <script>
-         var ctxLabel = [
-             "1/6",
-             "2/6",
-             "3/6",
-             "4/6",
-             "5/6",
-             "6/6",
-             "7/6",
-             "8/6",
-             "9/6",
-             "10/6",
-             "11/6",
-             "12/6",
-             "13/6",
-             "14/6",
-             "15/6",
-             "16/6",
-             "17/6",
-             "18/6",
-             "19/6",
-             "20/6",
-             "21/6",
-             "22/6",
-             "23/6",
-             "24/6",
-             "25/6",
-             "26/6",
-             "27/6",
-             "28/6",
-             "29/6",
-             "30/6",
-         ]; //Ngày tháng
-         var ctxapp1 = [20, 60, 50, 45, 50, 60, 70, 40, 45, 35, 25, 30, 40, 20, 30, 10, 22.5, 55.4, 33.2, 75.8, 45.2, 32.1, 20, 30.8, 50, 0, 0, 0, 0, 0];
-         var ctxapp2 = [20, 30, 60, 40, 60, 102, 95, 45, 130, 80, 95, 70, 20, 10, 64, 23, 43, 23, 66, 21, 77, 88, 22, 66, 0, 0, 0, 0, 0, 0];
-         var ctxapp3 = [10, 40, 30, 40, 40, 5, 23, 55, 40, 40, 5, 70, 20, 10, 64, 23, 43, 23, 65, 22, 77, 88, 22, 56, 0, 0, 0, 0, 0, 0];
-         
-         var ctxColor1 = "#1B283F";
-         var ctxColor2 = "#FFA800";
-         var ctxColor3 = "#34a8eb";
-         var ctxColor4 = "#8950FC";
-         var ctxColor5 = "#F64E60";
-         
-         
-         var ctx3 = document.getElementById("chart2").getContext("2d");
-         new Chart(ctx3, {
-             type: "bar",
-             data: {
-                 labels: ctxLabel,
-                 datasets: [
-                     {
-                         data: ctxapp1,
-                         label: "Hexagon",
-                         backgroundColor: ctxColor1,
-                     },
-                     {
-                         data: ctxapp2,
-                         label: "NinjaWarrior",
-                         backgroundColor: ctxColor2,
-                     },
-                     {
-                         data: ctxapp3,
-                         label: "DragonShadow",
-                         backgroundColor: ctxColor3,
-                     },
-                 ],
-             },
-             options: {
-                 maintainAspectRatio: false,
-                 responsive: true,
-                 legend: {
-                     display: true,
-                     labels: {
-                         display: false,
-                     },
-                 },
-                 scales: {
-                     yAxes: [
-                         {
-                             stacked: true,
-                             gridLines: {
-                                 color: "#e5e9f2",
-                             },
-                             ticks: {
-                                 beginAtZero: true,
-                                 fontSize: 10,
-                                 fontColor: "#182b49",
-                             },
-                         },
-                     ],
-                     xAxes: [
-                         {
-                             stacked: true,
-                             gridLines: {
-                                 display: false,
-                             },
-                             barPercentage: 0.6,
-                             ticks: {
-                                 beginAtZero: true,
-                                 fontSize: 11,
-                                 fontColor: "#182b49",
-                             },
-                         },
-                     ],
-                 },
-             },
-         });
-      </script>
-      <script>
-         /** PIE CHART **/
-         var ctx = document.getElementById("chartDonut");
-         var myChart = new Chart(ctx, {
-         type: "doughnut",
-         data: {
-         labels: ["Tapjoy", "Sonic", "Fyber", "Other"],
-         datasets: [
-         {
-         label: "",
-         data: [316, 85, 500,100],
-         backgroundColor: ["#F64E60", "#3699FF", "#1BC5BD" , "#9A69FB"]
-         }
-         ]
-         },
-         options: {
-         tooltips: {
-         enabled: true,
-         mode: "single",
-         callbacks: {
-         label: function (tooltipItems, data) {
-         return (
-         data.labels[tooltipItems.index] +
-         data.datasets[tooltipItems.datasetIndex].label +
-         ": " +
-         "$" +
-         data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index]
-         );
-         }
-         }
-         },
-         legend: {
-         position: "bottom"
-         }
-         
-         }
-         });
-         
-      </script>
-	   <script>
-      $(function(){
-       
-        var dateFormat = 'mm/dd/yy',
-        from = $('#dateFrom')
-        .datepicker({
-          defaultDate: '+1w',
-          numberOfMonths: 1
-        })
-        .on('change', function() {
-          to.datepicker('option','minDate', getDate( this ) );
-        }),
-        to = $('#dateTo').datepicker({
-          defaultDate: '+1w',
-          numberOfMonths: 1
-        })
-        .on('change', function() {
-          from.datepicker('option','maxDate', getDate( this ) );
-        });
 
-        function getDate( element ) {
-          var date;
-          try {
-            date = $.datepicker.parseDate( dateFormat, element.value );
-          } catch( error ) {
-            date = null;
-          }
-
-          return date;
-        }
-
-      });
-    </script>
+      <script src="assets/plugins/custom/datatables/datatables.bundle.js?v=7.0.5"></script>
+      <script src="assets/js/pages/crud/datatables/data-sources/network.js?v=7.0.5"></script>
    </body>
    <!--end::Body-->
 </html>

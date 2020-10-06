@@ -43,7 +43,7 @@
       <!--begin::Header Mobile-->
       <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
          <!--begin::Logo-->
-         <a href="index.html">
+         <a href="index.php">
          <img alt="Logo" src="assets/media/logos/logo-light.png" />
          </a>
          <!--end::Logo-->
@@ -81,7 +81,7 @@
                <!--begin::Brand-->
                <div class="brand flex-column-auto" id="kt_brand">
                   <!--begin::Logo-->
-                  <a href="index.html" class="brand-logo">
+                  <a href="index.php" class="brand-logo">
                   <img alt="Logo" src="assets/media/logos/logo-light.png" />
                   </a>
                   <!--end::Logo-->
@@ -108,8 +108,8 @@
                   <div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
                      <!--begin::Menu Nav-->
                      <ul class="menu-nav">
-                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="index.html" class="menu-link menu-toggle">
+                        <li class="menu-item menu-item-active" aria-haspopup="true">
+                           <a href="index.php" class="menu-link">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -129,7 +129,7 @@
                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="history.html" class="menu-link menu-toggle">
+                           <a href="history.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -146,7 +146,7 @@
                            </a>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="account.html" class="menu-link menu-toggle">
+                           <a href="account.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -168,7 +168,7 @@
                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="ssh_manager.html" class="menu-link menu-toggle">
+                           <a href="ssh_manager.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Bucket.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -185,7 +185,7 @@
                            </a>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="ssh247.html" class="menu-link menu-toggle">
+                           <a href="ssh247.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Code/Compiling.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -205,8 +205,7 @@
                            <h4 class="menu-text">Analyze</h4>
                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
-                      
-							   <li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
+                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                            <a href="javascript:;" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/PenAndRuller.svg-->
@@ -226,7 +225,7 @@
                               <i class="menu-arrow"></i>
                               <ul class="menu-subnav">
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="member_analytics.html" class="menu-link menu-toggle">
+                                    <a href="member_analytics.php" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -235,7 +234,7 @@
                                     </a>
                                  </li>
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="app_analytics.html" class="menu-link menu-toggle">
+                                    <a href="app_analytics.php" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -250,8 +249,8 @@
                            <h4 class="menu-text">Management</h4>
                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
-                       <li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
-						 <a href="javascript:;" class="menu-link menu-toggle">
+                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                           <a href="javascript:;" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Box2.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -269,20 +268,20 @@
                            <div class="menu-submenu">
                               <i class="menu-arrow"></i>
                               <ul class="menu-subnav">
-								   <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="network_manager.html" class="menu-link menu-toggle">
+                                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                    <a href="network_manager.php" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
-                                 
                                     <span class="menu-text">Quản Lý NetWork</span>
                                     <i class="menu-arrow"></i>
-                                 </a></li>
-								   <li class="menu-item menu-item-active" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link">
-													<i class="menu-bullet menu-bullet-dot">
-														<span></span>
-													</i>
+                                    </a>
+                                 </li>
+                                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                    <a href="app_manager.php" class="menu-link menu-toggle">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                    <span></span>
+                                    </i>
                                     <span class="menu-text">Quản Lý App</span>
                                     <i class="menu-arrow"></i>
                                     </a>
@@ -291,7 +290,7 @@
                            </div>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="member_manager.html" class="menu-link menu-toggle">
+                           <a href="member_manager.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Files/Pictures1.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -378,8 +377,7 @@
                         <!--begin::Info-->
                         <div class="d-flex align-items-center flex-wrap mr-2">
                            <!--begin::Page Title-->
-                           <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">App Management
-</h5>
+                           <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Dashboard</h5>
                            <!--end::Page Title-->
                            <!--begin::Actions-->
                            <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
@@ -454,7 +452,7 @@
 													<p class="text-white font-size-sm">Bảng chấm công sẽ ghi lại toàn bộ khoảng thời gian
 													<br /> làm việc, nghỉ việc, nghĩ lễ
 													<br /> của nhân viên</p>
-														<a href='#' class="btn btn-link btn-link-warning font-weight-bold">Start Now
+														<a href="#" class="btn btn-link btn-link-warning font-weight-bold">Start Now
 														<span class="svg-icon svg-icon-lg svg-icon-warning">
 															<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
 															<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -495,7 +493,7 @@
 								</div><!-- col -->
 								  
 								 
-								<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" id='submit'>Submit</button>
+								<button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" id="submit">Submit</button>
 							
 
 
@@ -506,7 +504,7 @@
 												</div>
                                  </div>
                                  <div class="card-body">
-                                    <canvas id="chart1" height=70 ></canvas>
+                                    <canvas id="chart1" height="70" ></canvas>
                                  </div>
                               </div>
                               <!--end::Card-->
@@ -573,7 +571,7 @@
 									 
                                  </div>
                                  <div class="card-body">
-                                    <canvas id="chart2" height=300 ></canvas>
+                                    <canvas id="chart2" height="300" ></canvas>
                                  </div>
                               </div>
                               <!--end::Advance Table Widget 4-->

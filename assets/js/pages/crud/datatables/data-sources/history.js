@@ -16,17 +16,17 @@ var KTDatatablesDataSourceAjaxServer = function() {
 			},
 			columns: [
 				{data: 'datetime'},
-				{data: 'network_name'},
-				{data: 'coins'},
+				{data: 'app_name'},
 				{data: 'email'},
 				{data: 'gaid'},
-				{data: 'app_name'},
+				{data: 'coins'},
+				{data: 'network_name'},
 				{data: 'Actions'},
 			]
 		});
 
 		//delete history
-		table.on('click','.deleteUser',function(){
+		table.on('click','.deleteHistory',function(){
 			var id = $(this).data('id');
 
 			var deleteConfirm = confirm("Are you sure?");

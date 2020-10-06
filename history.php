@@ -45,7 +45,7 @@
       <!--begin::Header Mobile-->
       <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
          <!--begin::Logo-->
-         <a href="index.html">
+         <a href="index.php">
          <img alt="Logo" src="assets/media/logos/logo-light.png" />
          </a>
          <!--end::Logo-->
@@ -83,7 +83,7 @@
                <!--begin::Brand-->
                <div class="brand flex-column-auto" id="kt_brand">
                   <!--begin::Logo-->
-                  <a href="index.html" class="brand-logo">
+                  <a href="index.php" class="brand-logo">
                   <img alt="Logo" src="assets/media/logos/logo-light.png" />
                   </a>
                   <!--end::Logo-->
@@ -111,7 +111,7 @@
                      <!--begin::Menu Nav-->
                      <ul class="menu-nav">
                         <li class="menu-item menu-item" aria-haspopup="true">
-                           <a href="index.html" class="menu-link">
+                           <a href="index.php" class="menu-link">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -148,7 +148,7 @@
                            </a>
                         </li>
                         <li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="account.html" class="menu-link menu-toggle">
+                           <a href="account.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -170,7 +170,7 @@
                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="ssh_manager.html" class="menu-link menu-toggle">
+                           <a href="ssh_manager.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Bucket.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -187,7 +187,7 @@
                            </a>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="ssh247.html" class="menu-link menu-toggle">
+                           <a href="ssh247.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Code/Compiling.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -227,7 +227,7 @@
                               <i class="menu-arrow"></i>
                               <ul class="menu-subnav">
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="member_analytics.html" class="menu-link menu-toggle">
+                                    <a href="member_analytics.php" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -236,7 +236,7 @@
                                     </a>
                                  </li>
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="app_analytics.html" class="menu-link menu-toggle">
+                                    <a href="app_analytics.php" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -271,7 +271,7 @@
                               <i class="menu-arrow"></i>
                               <ul class="menu-subnav">
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="network_manager.html" class="menu-link menu-toggle">
+                                    <a href="network_manager.php" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -280,7 +280,7 @@
                                     </a>
                                  </li>
                                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="app_manager.html" class="menu-link menu-toggle">
+                                    <a href="app_manager.php" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                     <span></span>
                                     </i>
@@ -292,7 +292,7 @@
                            </div>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="member_manager.html" class="menu-link menu-toggle">
+                           <a href="member_manager.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Files/Pictures1.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -717,7 +717,7 @@
       <script src="lib/chart.js/Chart.bundle.min.js"></script>
 
       <script src="assets/plugins/custom/datatables/datatables.bundle.js?v=7.0.5"></script>
-      <script src="assets/js/pages/crud/datatables/data-sources/ajax-server-side.js?v=7.0.5"></script>
+      <script src="assets/js/pages/crud/datatables/data-sources/history.js?v=7.0.5"></script>
    </body>
    <!--end::Body-->
 </html>
