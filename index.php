@@ -28,6 +28,8 @@ include ('connect.php');
     <link href="assets/css/themes/layout/aside/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <!--Pusher-->
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -706,118 +708,30 @@ include ('connect.php');
             <!--begin::Tabpane-->
             <div class="tab-pane fade show pt-5 pr-5 mr-n5 active" id="kt_quick_panel_logs" role="tabpanel" >
                 <!--begin::Section-->
-                <div class="mb-10">
+                <div class="mb-10" id="result">
                     <!--begin: Item-->
-                    <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm">QuangDiep555stydgdgdgddggsgddggdd</span>
-                            <span class="text-muted font-size-sm">Tapjoy</span>
-                            <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                            <span class="text-muted font-size-sm">2020/10/03 10:22:04</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                    </div>
-                    <!--end: Item-->
-                    <!--begin: Item-->
-                    <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi111sjsdgdgk</span>
-                            <span class="text-muted font-size-sm">Tapjoy</span>
-                            <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                            <span class="text-muted font-size-sm">2020/10/03 10:30:06</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+200</span>
-                    </div>
-                    <!--end: Item-->
-                    <!--begin: Item-->
-                    <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm">Clickerbduaa9vji</span>
-                            <span class="text-muted font-size-sm">Tapjoy</span>
-                            <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                            <span class="text-muted font-size-sm">2020/10/03 11:44:44</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+1</span>
-                    </div>
-                    <!--end: Item-->
-                    <!--begin: Item-->
-                    <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm">QuangDiep111v544ffgdfdf</span>
-                            <span class="text-muted font-size-sm">Tapjoy</span>
-                            <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                            <span class="text-muted font-size-sm">2020/10/03 11:44:44</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                    </div>
-                    <!--end: Item-->
-                    <!--begin: Item-->
-                    <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm">Clickera293hlit8dp</span>
-                            <span class="text-muted font-size-sm">Tapjoy</span>
-                            <span class="text-muted font-size-sm">TheNB_TJ_BlockPuzzle</span>
-                            <span class="text-muted font-size-sm">2020/10/03 11:37:48</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+1</span>
-                    </div>
-                    <!--end: Item-->
-                    <!--begin: Item-->
-                    <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
+                    <?php
+                    $stmt_now = $conn->prepare("SELECT email, network_name, app_name, datetime, tblHistory.coins FROM tblHistory INNER JOIN tblUsers on tblUsers.id = tblHistory.tblUsers_id INNER JOIN tblApps ON tblHistory.tblApps_id = tblApps.id ORDER BY datetime DESC LIMIT 15");
+                    $stmt_now->setFetchMode(PDO::FETCH_ASSOC);
+                    $stmt_now->execute();
+                    $resultNow = $stmt_now->fetchAll();
 
-                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm">HaNguyen6666Hydro6yfyfyfgu</span>
-                            <span class="text-muted font-size-sm">Sonic</span>
-                            <span class="text-muted font-size-sm">TheNB_Hexagon</span>
-                            <span class="text-muted font-size-sm">2020/10/03 11:28:28</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+2400</span>
-                    </div>
-                    <!--end: Item-->
-                    <!--begin: Item-->
+                    foreach ($resultNow as $row){
+                    ?>
+
                     <div class="d-flex align-items-center flex-wrap mb-5" >
                         <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi333cbchdhgda</span>
-                            <span class="text-muted font-size-sm">Tapjoy</span>
-                            <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                            <span class="text-muted font-size-sm">2020/10/03 11:28:19</span>
+                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm"><?php echo $row['email'] ?></span>
+                            <span class="text-muted font-size-sm"><?php echo $row['network_name'] ?></span>
+                            <span class="text-muted font-size-sm"><?php echo $row['app_name'] ?></span>
+                            <span class="text-muted font-size-sm"><?php echo $row['datetime'] ?></span>
                         </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
+                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+<?php echo $row['coins'] ?></span>
                     </div>
+
+                    <?php }?>
                     <!--end: Item-->
-                    <!--begin: Item-->
-                    <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi222sffahfahsfjtaj</span>
-                            <span class="text-muted font-size-sm">Tapjoy</span>
-                            <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                            <span class="text-muted font-size-sm">2020/10/03 11:28:10</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                    </div>
-                    <!--end: Item-->
-                    <!--begin: Item-->
-                    <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm">QuangDiep111vsshehehshheehhe</span>
-                            <span class="text-muted font-size-sm">Tapjoy</span>
-                            <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                            <span class="text-muted font-size-sm">2020/10/03 11:25:46</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+100</span>
-                    </div>
-                    <!--end: Item-->
-                    <!--begin: Item-->
-                    <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi444hhhd</span>
-                            <span class="text-muted font-size-sm">Tapjoy</span>
-                            <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                            <span class="text-muted font-size-sm">2020/10/03 11:23:08</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+432</span>
-                    </div>
-                    <!--end: Item-->
+
                 </div>
                 <!--end::Section-->
             </div>
@@ -1119,17 +1033,17 @@ $name_count = 0;
 $name = [];
 $ctxapp_other = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
-$stmt_getname = $conn->prepare("SELECT DISTINCT offer_name FROM `tblHistory` WHERE MONTH(datetime) = MONTH(CURDATE()) AND YEAR(datetime) = YEAR(CURDATE()) AND coins > 0");
+$stmt_getname = $conn->prepare("SELECT DISTINCT app_name FROM `tblApps`");
 $stmt_getname->setFetchMode(PDO::FETCH_ASSOC);
 $stmt_getname->execute();
 $resultGetname = $stmt_getname->fetchAll();
 
 foreach ($resultGetname as $row){
-    array_push($name, $row['offer_name']);
+    array_push($name, $row['app_name']);
 }
 
 
-$stmt2 = $conn->prepare("SELECT offer_name, DAY(datetime) as d, MONTH(datetime) as m, SUM(coins) as total, COUNT(id) as acc FROM `tblHistory` WHERE MONTH(datetime) = MONTH(CURDATE()) AND YEAR(datetime) = YEAR(CURDATE()) GROUP BY DAY(datetime), offer_name ORDER BY datetime");
+$stmt2 = $conn->prepare("SELECT app_name, DAY(datetime) as d, MONTH(datetime) as m, SUM(coins) as total, COUNT(tblhistory.id) as acc FROM `tblHistory` INNER JOIN tblapps on tblhistory.tblapps_id = tblapps.id WHERE MONTH(datetime) = MONTH(CURDATE()) AND YEAR(datetime) = YEAR(CURDATE()) GROUP BY DAY(datetime), tblapps_id");
 $stmt2->setFetchMode(PDO::FETCH_ASSOC);
 $stmt2->execute();
 $resultSet2 = $stmt2->fetchAll();
@@ -1138,7 +1052,7 @@ foreach ($resultGetname as $row){
     $ctxapp[$name_count] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
     foreach ($resultSet2 as $row1){
-        if ($row1['offer_name'] == $name[$name_count]){
+        if ($row1['app_name'] == $name[$name_count]){
             $ctxapp[$name_count][$row1['d'] - 1] = round($row1['total']*0.001, 3);
         }
     }
@@ -1184,7 +1098,7 @@ foreach ($resultGetname as $row){
                 foreach ($resultGetname as $row){
                         echo "{";
                         echo "data:" . json_encode($ctxapp[$count]) . ",";
-                        echo "label: '" . $row['offer_name'] . "',";
+                        echo "label: '" . $row['app_name'] . "',";
                         echo "backgroundColor: ctxColor" . $count . ",";
                         echo "},";
                         $count++;
@@ -1331,6 +1245,20 @@ foreach ($resultGetname as $row){
             return date;
         }
 
+    });
+</script>
+
+<script>
+
+    var pusher = new Pusher('bb65a66741157850c668', {
+        cluster: 'ap1'
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+        $.ajax({url: "ajaxHistory.php", success: function(result){
+                $("#result").html(result);
+            }});
     });
 </script>
 </body>
