@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-   <!--begin::Head-->
-   <head>
-      <base href="">
-      <meta charset="utf-8" />
-      <title>Metronic | Dashboard</title>
-      <meta name="description" content="Updates and statistics" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <!--begin::Fonts-->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-      <!--end::Fonts-->
-      <!--begin::Page Vendors Styles(used by this page)-->
-      <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
-      <!--end::Page Vendors Styles-->
-      <!--begin::Global Theme Styles(used by all pages)-->
-      <link href="assets/plugins/global/plugins.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
-      <link href="assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
-      <link href="assets/css/style.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
-      <!--end::Global Theme Styles-->
-      <!--begin::Layout Themes(used by all pages)-->
-      <link href="assets/css/themes/layout/header/base/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
-      <link href="assets/css/themes/layout/header/menu/dark.css" rel="stylesheet" type="text/css" />
-      <link href="assets/css/themes/layout/brand/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
-      <link href="assets/css/themes/layout/aside/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
-      <!--end::Layout Themes-->
-      <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
-   </head>
-   <!--end::Head-->
-   <!--begin::Body-->
-   <body id="kt_body" class="page-loading-enabled page-loading header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
-      <!--begin::Page loader-->
-      <div class="page-loader page-loader-base">
-         <div class="blockui">
-            <span>Please wait...</span>
-            <span>
+<!--begin::Head-->
+<head>
+    <base href="">
+    <meta charset="utf-8" />
+    <title>Metronic | Dashboard</title>
+    <meta name="description" content="Updates and statistics" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Page Vendors Styles(used by this page)-->
+    <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <!--end::Page Vendors Styles-->
+
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link href="assets/plugins/global/plugins.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <!--end::Global Theme Styles-->
+    <!--begin::Layout Themes(used by all pages)-->
+    <link href="assets/css/themes/layout/header/base/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <link href="assets/css/themes/layout/header/menu/dark.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/themes/layout/brand/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <link href="assets/css/themes/layout/aside/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <!--end::Layout Themes-->
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+<body id="kt_body" class="page-loading-enabled page-loading header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+<!--begin::Page loader-->
+<div class="page-loader page-loader-base">
+    <div class="blockui">
+        <span>Please wait...</span>
+        <span>
                <div class="spinner spinner-primary"></div>
             </span>
-         </div>
-      </div>
-      <!--end::Page Loader-->
-      <!--begin::Main-->
-      <!--begin::Header Mobile-->
-      <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
-         <!--begin::Logo-->
-         <a href="index.html">
-         <img alt="Logo" src="assets/media/logos/logo-light.png" />
-         </a>
-         <!--end::Logo-->
-         <!--begin::Toolbar-->
-         <div class="d-flex align-items-center">
-            <!--begin::Aside Mobile Toggle-->
-            <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
+    </div>
+</div>
+<!--end::Page Loader-->
+<!--begin::Main-->
+<!--begin::Header Mobile-->
+<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
+    <!--begin::Logo-->
+    <a href="index.php">
+        <img alt="Logo" src="assets/media/logos/logo-light.png" />
+    </a>
+    <!--end::Logo-->
+    <!--begin::Toolbar-->
+    <div class="d-flex align-items-center">
+        <!--begin::Aside Mobile Toggle-->
+        <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
             <span></span>
-            </button>
-            <!--end::Aside Mobile Toggle-->
-            <!--begin::Topbar Mobile Toggle-->
-            <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+        </button>
+        <!--end::Aside Mobile Toggle-->
+        <!--begin::Topbar Mobile Toggle-->
+        <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
                <span class="svg-icon svg-icon-xl">
                   <!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -65,28 +67,28 @@
                         <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
                      </g>
                   </svg>
-                  <!--end::Svg Icon-->
+                   <!--end::Svg Icon-->
                </span>
-            </button>
-            <!--end::Topbar Mobile Toggle-->
-         </div>
-         <!--end::Toolbar-->
-      </div>
-      <!--end::Header Mobile-->
-      <div class="d-flex flex-column flex-root">
-         <!--begin::Page-->
-         <div class="d-flex flex-row flex-column-fluid page">
-            <!--begin::Aside-->
-            <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
-               <!--begin::Brand-->
-               <div class="brand flex-column-auto" id="kt_brand">
-                  <!--begin::Logo-->
-                  <a href="index.html" class="brand-logo">
-                  <img alt="Logo" src="assets/media/logos/logo-light.png" />
-                  </a>
-                  <!--end::Logo-->
-                  <!--begin::Toggle-->
-                  <button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
+        </button>
+        <!--end::Topbar Mobile Toggle-->
+    </div>
+    <!--end::Toolbar-->
+</div>
+<!--end::Header Mobile-->
+<div class="d-flex flex-column flex-root">
+    <!--begin::Page-->
+    <div class="d-flex flex-row flex-column-fluid page">
+        <!--begin::Aside-->
+        <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
+            <!--begin::Brand-->
+            <div class="brand flex-column-auto" id="kt_brand">
+                <!--begin::Logo-->
+                <a href="index.php" class="brand-logo">
+                    <img alt="Logo" src="assets/media/logos/logo-light.png" />
+                </a>
+                <!--end::Logo-->
+                <!--begin::Toggle-->
+                <button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
                      <span class="svg-icon svg-icon svg-icon-xl">
                         <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-left.svg-->
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -96,20 +98,20 @@
                               <path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999)" />
                            </g>
                         </svg>
-                        <!--end::Svg Icon-->
+                         <!--end::Svg Icon-->
                      </span>
-                  </button>
-                  <!--end::Toolbar-->
-               </div>
-               <!--end::Brand-->
-               <!--begin::Aside Menu-->
-               <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
-                  <!--begin::Menu Container-->
-                  <div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
-                     <!--begin::Menu Nav-->
-                     <ul class="menu-nav">
+                </button>
+                <!--end::Toolbar-->
+            </div>
+            <!--end::Brand-->
+            <!--begin::Aside Menu-->
+            <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+                <!--begin::Menu Container-->
+                <div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+                    <!--begin::Menu Nav-->
+                    <ul class="menu-nav">
                         <li class="menu-item menu-item" aria-haspopup="true">
-                           <a href="index.html" class="menu-link">
+                            <a href="index.php" class="menu-link">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -119,18 +121,18 @@
                                        <path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3" />
                                     </g>
                                  </svg>
-                                 <!--end::Svg Icon-->
+                                  <!--end::Svg Icon-->
                               </span>
-                              <span class="menu-text">Dashboard</span>
-                           </a>
+                                <span class="menu-text">Dashboard</span>
+                            </a>
                         </li>
                         <li class="menu-section">
-                           <h4 class="menu-text">Custom</h4>
-                           <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+                            <h4 class="menu-text">Custom</h4>
+                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
                         <li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
-							
-                           <a href="history.html" class="menu-link menu-toggle">
+
+                            <a href="history.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -140,17 +142,17 @@
                                        <path d="M4.5,5 L9.5,5 C10.3284271,5 11,5.67157288 11,6.5 C11,7.32842712 10.3284271,8 9.5,8 L4.5,8 C3.67157288,8 3,7.32842712 3,6.5 C3,5.67157288 3.67157288,5 4.5,5 Z M4.5,17 L9.5,17 C10.3284271,17 11,17.6715729 11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L4.5,20 C3.67157288,20 3,19.3284271 3,18.5 C3,17.6715729 3.67157288,17 4.5,17 Z M2.5,11 L6.5,11 C7.32842712,11 8,11.6715729 8,12.5 C8,13.3284271 7.32842712,14 6.5,14 L2.5,14 C1.67157288,14 1,13.3284271 1,12.5 C1,11.6715729 1.67157288,11 2.5,11 Z" fill="#000000" opacity="0.3"/>
                                     </g>
                                  </svg>
-                                 <!--end::Svg Icon-->
+                                  <!--end::Svg Icon-->
                               </span>
-                              <span class="menu-text">Lịch Sử Trả Điểm</span>
-                              <i class="menu-arrow"></i>
-                           </a>
+                                <span class="menu-text">Lịch Sử Trả Điểm</span>
+                                <i class="menu-arrow"></i>
+                            </a>
                         </li>
-												   
-							<li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="account.html" class="menu-link menu-toggle">
-						 
-                       
+
+                        <li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
+                            <a href="account.php" class="menu-link menu-toggle">
+
+
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -161,19 +163,19 @@
                                        <path d="M5,16 L19,16 C20.1045695,16 21,16.8954305 21,18 L21,20 C21,21.1045695 20.1045695,22 19,22 L5,22 C3.8954305,22 3,21.1045695 3,20 L3,18 C3,16.8954305 3.8954305,16 5,16 Z M11,18 C10.4477153,18 10,18.4477153 10,19 C10,19.5522847 10.4477153,20 11,20 L16,20 C16.5522847,20 17,19.5522847 17,19 C17,18.4477153 16.5522847,18 16,18 L11,18 Z M7,20 C7.55228475,20 8,19.5522847 8,19 C8,18.4477153 7.55228475,18 7,18 C6.44771525,18 6,18.4477153 6,19 C6,19.5522847 6.44771525,20 7,20 Z" fill="#000000"/>
                                     </g>
                                  </svg>
-                                 <!--end::Svg Icon-->
+                                  <!--end::Svg Icon-->
                               </span>
-                              <span class="menu-text">Danh Sách Tài Khoản</span>
-                              <i class="menu-arrow"></i>
-                           </a>
+                                <span class="menu-text">Danh Sách Tài Khoản</span>
+                                <i class="menu-arrow"></i>
+                            </a>
                         </li>
                         <li class="menu-section">
-                           <h4 class="menu-text">Tool</h4>
-                           <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+                            <h4 class="menu-text">Tool</h4>
+                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
                         <li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="ssh_manager.html" class="menu-link menu-toggle">
-						   
+                            <a href="ssh_manager.php" class="menu-link menu-toggle">
+
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Bucket.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -183,14 +185,14 @@
                                        <path d="M20,22 C21.6568542,22 23,20.6568542 23,19 C23,17.8954305 22,16.2287638 20,14 C18,16.2287638 17,17.8954305 17,19 C17,20.6568542 18.3431458,22 20,22 Z" fill="#000000" opacity="0.3" />
                                     </g>
                                  </svg>
-                                 <!--end::Svg Icon-->
+                                  <!--end::Svg Icon-->
                               </span>
-                              <span class="menu-text">Danh Sách SSH</span>
-                              <i class="menu-arrow"></i>
-                           </a>
+                                <span class="menu-text">Danh Sách SSH</span>
+                                <i class="menu-arrow"></i>
+                            </a>
                         </li>
-                       <li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="ssh247.html" class="menu-link menu-toggle">
+                        <li class="menu-item menu-item-submenu-active" aria-haspopup="true" data-menu-toggle="hover">
+                            <a href="ssh247.php" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Code/Compiling.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -200,18 +202,18 @@
                                        <path d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z" fill="#000000" />
                                     </g>
                                  </svg>
-                                 <!--end::Svg Icon-->
+                                  <!--end::Svg Icon-->
                               </span>
-                              <span class="menu-text">SSH 24/7</span>
-                              <i class="menu-arrow"></i>
-                           </a>
+                                <span class="menu-text">SSH 24/7</span>
+                                <i class="menu-arrow"></i>
+                            </a>
                         </li>
                         <li class="menu-section">
-                           <h4 class="menu-text">Analyze</h4>
-                           <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+                            <h4 class="menu-text">Analyze</h4>
+                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="javascript:;" class="menu-link menu-toggle">
+                            <a href="javascript:;" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Design/PenAndRuller.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -221,41 +223,41 @@
                                        <path d="M16,3 L19,3 C20.1045695,3 21,3.8954305 21,5 L21,15.2485298 C21,15.7329761 20.8241635,16.200956 20.5051534,16.565539 L17.8762883,19.5699562 C17.6944473,19.7777745 17.378566,19.7988332 17.1707477,19.6169922 C17.1540423,19.602375 17.1383289,19.5866616 17.1237117,19.5699562 L14.4948466,16.565539 C14.1758365,16.200956 14,15.7329761 14,15.2485298 L14,5 C14,3.8954305 14.8954305,3 16,3 Z" fill="#000000" />
                                     </g>
                                  </svg>
-                                 <!--end::Svg Icon-->
+                                  <!--end::Svg Icon-->
                               </span>
-                              <span class="menu-text">Thống Kê</span>
-                              <i class="menu-arrow"></i>
-                           </a>
-                           <div class="menu-submenu">
-                              <i class="menu-arrow"></i>
-                              <ul class="menu-subnav">
-                                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="member_analytics.html" class="menu-link menu-toggle">
-                                    <i class="menu-bullet menu-bullet-dot">
-                                    <span></span>
-                                    </i>
-                                    <span class="menu-text">Nhân Viên</span>
-                                    <i class="menu-arrow"></i>
-                                    </a>
-                                 </li>
-                                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="app_analytics.html" class="menu-link menu-toggle">
-                                    <i class="menu-bullet menu-bullet-dot">
-                                    <span></span>
-                                    </i>
-                                    <span class="menu-text">App</span>
-                                    <i class="menu-arrow"></i>
-                                    </a>
-                                 </li>
-                              </ul>
-                           </div>
+                                <span class="menu-text">Thống Kê</span>
+                                <i class="menu-arrow"></i>
+                            </a>
+                            <div class="menu-submenu">
+                                <i class="menu-arrow"></i>
+                                <ul class="menu-subnav">
+                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                        <a href="member_analytics.php" class="menu-link menu-toggle">
+                                            <i class="menu-bullet menu-bullet-dot">
+                                                <span></span>
+                                            </i>
+                                            <span class="menu-text">Nhân Viên</span>
+                                            <i class="menu-arrow"></i>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                        <a href="app_analytics.php" class="menu-link menu-toggle">
+                                            <i class="menu-bullet menu-bullet-dot">
+                                                <span></span>
+                                            </i>
+                                            <span class="menu-text">App</span>
+                                            <i class="menu-arrow"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="menu-section">
-                           <h4 class="menu-text">Management</h4>
-                           <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+                            <h4 class="menu-text">Management</h4>
+                            <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                           <a href="javascript:;" class="menu-link menu-toggle">
+                            <a href="javascript:;" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Box2.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -265,37 +267,37 @@
                                        <path d="M4.21611835,7.74669402 C4.30015839,7.64056877 4.40623188,7.55087574 4.5299008,7.48500698 L11.5299008,3.75665466 C11.8237589,3.60013944 12.1762411,3.60013944 12.4700992,3.75665466 L19.4700992,7.48500698 C19.5654307,7.53578262 19.6503066,7.60071528 19.7226939,7.67641889 L12.0479413,12.1074394 C11.9974761,12.1365754 11.9509488,12.1699127 11.9085461,12.2067543 C11.8661433,12.1699127 11.819616,12.1365754 11.7691509,12.1074394 L4.21611835,7.74669402 Z" fill="#000000" opacity="0.3" />
                                     </g>
                                  </svg>
-                                 <!--end::Svg Icon-->
+                                  <!--end::Svg Icon-->
                               </span>
-                              <span class="menu-text">Quản Trị Hệ Thống</span>
-                              <i class="menu-arrow"></i>
-                           </a>
-                           <div class="menu-submenu">
-                              <i class="menu-arrow"></i>
-                              <ul class="menu-subnav">
-                                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="network_manager.html" class="menu-link menu-toggle">
-                                    <i class="menu-bullet menu-bullet-dot">
-                                    <span></span>
-                                    </i>
-                                    <span class="menu-text">Quản Lý NetWork</span>
-                                    <i class="menu-arrow"></i>
-                                    </a>
-                                 </li>
-                                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="app_manager.html" class="menu-link menu-toggle">
-                                    <i class="menu-bullet menu-bullet-dot">
-                                    <span></span>
-                                    </i>
-                                    <span class="menu-text">Quản Lý App</span>
-                                    <i class="menu-arrow"></i>
-                                    </a>
-                                 </li>
-                              </ul>
-                           </div>
+                                <span class="menu-text">Quản Trị Hệ Thống</span>
+                                <i class="menu-arrow"></i>
+                            </a>
+                            <div class="menu-submenu">
+                                <i class="menu-arrow"></i>
+                                <ul class="menu-subnav">
+                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                        <a href="network_manager.php" class="menu-link menu-toggle">
+                                            <i class="menu-bullet menu-bullet-dot">
+                                                <span></span>
+                                            </i>
+                                            <span class="menu-text">Quản Lý NetWork</span>
+                                            <i class="menu-arrow"></i>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                        <a href="app_manager.php" class="menu-link menu-toggle">
+                                            <i class="menu-bullet menu-bullet-dot">
+                                                <span></span>
+                                            </i>
+                                            <span class="menu-text">Quản Lý App</span>
+                                            <i class="menu-arrow"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="menu-item menu-item-active" aria-haspopup="true">
-                           <a href="javascript:;" class="menu-link menu-toggle">
+                            <a href="javascript:;" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Files/Pictures1.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -307,41 +309,41 @@
                                        <path d="M18,12 C18.8284271,12 19.5,11.3284271 19.5,10.5 C19.5,9.67157288 18.8284271,9 18,9 C17.1715729,9 16.5,9.67157288 16.5,10.5 C16.5,11.3284271 17.1715729,12 18,12 Z" fill="#000000" opacity="0.3" />
                                     </g>
                                  </svg>
-                                 <!--end::Svg Icon-->
+                                  <!--end::Svg Icon-->
                               </span>
-                              <span class="menu-text">Quản Lý Nhân Viên</span>
-                              <i class="menu-arrow"></i>
-                           </a>
+                                <span class="menu-text">Quản Lý Nhân Viên</span>
+                                <i class="menu-arrow"></i>
+                            </a>
                         </li>
-                     </ul>
-                     <!--end::Menu Nav-->
-                  </div>
-                  <!--end::Menu Container-->
-               </div>
-               <!--end::Aside Menu-->
+                    </ul>
+                    <!--end::Menu Nav-->
+                </div>
+                <!--end::Menu Container-->
             </div>
-            <!--end::Aside-->
-            <!--begin::Wrapper-->
-            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-               <!--begin::Header-->
-               <div id="kt_header" class="header header-fixed">
-                  <!--begin::Container-->
-                  <div class="container-fluid d-flex align-items-stretch justify-content-between">
-                     <!--begin::Header Menu Wrapper-->
-                     <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+            <!--end::Aside Menu-->
+        </div>
+        <!--end::Aside-->
+        <!--begin::Wrapper-->
+        <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+            <!--begin::Header-->
+            <div id="kt_header" class="header header-fixed">
+                <!--begin::Container-->
+                <div class="container-fluid d-flex align-items-stretch justify-content-between">
+                    <!--begin::Header Menu Wrapper-->
+                    <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
                         <!--begin::Header Menu-->
                         <div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
-                           <!--begin::Header Nav--><a href="javascript:;" class="menu-link menu-toggle"><i class="menu-arrow"></i>
-                           </a>									<!--end::Header Nav-->
+                            <!--begin::Header Nav--><a href="javascript:;" class="menu-link menu-toggle"><i class="menu-arrow"></i>
+                            </a>									<!--end::Header Nav-->
                         </div>
                         <!--end::Header Menu-->
-                     </div>
-                     <!--end::Header Menu Wrapper-->
-                     <!--begin::Topbar-->
-                     <div class="topbar">
+                    </div>
+                    <!--end::Header Menu Wrapper-->
+                    <!--begin::Topbar-->
+                    <div class="topbar">
                         <!--begin::Quick panel-->
                         <div class="topbar-item">
-                           <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary" id="kt_quick_panel_toggle">
+                            <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary" id="kt_quick_panel_toggle">
                               <span class="svg-icon svg-icon-xl svg-icon-primary">
                                  <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -352,210 +354,251 @@
                                     </g>
                                  </svg>
                               </span>
-                              <span class="pulse-ring"></span>
-                              <!--end::Svg Icon-->
-                           </div>
+                                <span class="pulse-ring"></span>
+                                <!--end::Svg Icon-->
+                            </div>
                         </div>
                         <!--end::Quick panel-->
                         <!--begin::User-->
                         <div class="topbar-item">
-                           <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
-                              <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
-                              <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Saviart</span>
-                              <span class="symbol symbol-35 symbol-light-success">
+                            <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
+                                <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
+                                <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Saviart</span>
+                                <span class="symbol symbol-35 symbol-light-success">
                               <span class="symbol-label font-size-h5 font-weight-bold">S</span>
                               </span>
-                           </div>
+                            </div>
                         </div>
                         <!--end::User-->
-                     </div>
-                     <!--end::Topbar-->
-                  </div>
-                  <!--end::Container-->
-               </div>
-               <!--end::Header-->
-               <!--begin::Content-->
-               <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-                  <!--begin::Subheader-->
-                  <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
-                     <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                    </div>
+                    <!--end::Topbar-->
+                </div>
+                <!--end::Container-->
+            </div>
+            <!--end::Header-->
+            <!--begin::Content-->
+            <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                <!--begin::Subheader-->
+                <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+                    <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
                         <!--begin::Info-->
                         <div class="d-flex align-items-center flex-wrap mr-2">
-                           <!--begin::Page Title-->
-                           <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Member Management</h5>
-                           <!--end::Page Title-->
-                           <!--begin::Actions-->
-                           <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-                           <!--end::Actions-->
+                            <!--begin::Page Title-->
+                            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Member Management</h5>
+                            <!--end::Page Title-->
+                            <!--begin::Actions-->
+                            <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
+                            <!--end::Actions-->
                         </div>
                         <!--end::Info-->
                         <!--begin::Toolbar-->
                         <!--end::Toolbar-->
-                     </div>
-                  </div>
-                  <!--end::Subheader-->
-                  <!--begin::Entry-->
-                  <div class="d-flex flex-column-fluid">
-                     <!--begin::Container-->
-                     <div class="container-fluid">
+                    </div>
+                </div>
+                <!--end::Subheader-->
+                <!--begin::Entry-->
+                <div class="d-flex flex-column-fluid">
+                    <!--begin::Container-->
+                    <div class="container-fluid">
                         <!--begin::Member List-->
-                      
-						 <div class="card card-custom">
-                           <div class="card-header">
-                              <div class="card-title">
+
+                        <div class="card card-custom">
+                            <div class="card-header">
+                                <div class="card-title">
 											<span class="card-icon">
 												<i class="flaticon2-supermarket text-primary"></i>
 											</span>
-                                 <h3 class="card-label">Quản lý người dùng</h3>
-                                 
-                              </div>
-                              <div class="card-toolbar">
-                                 <!--begin::Dropdown-->
-                         
-                                
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Thêm Người Dùng
-</button>
-				<!-- Modal-->
-<div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Thêm người dùng mới</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i aria-hidden="true" class="ki ki-close"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-<div class="modal-body pd-20 pd-sm-30">
-                                    <h5 class="tx-18 tx-sm-20 mg-b-20">Add new Member</h5>
-                                    <hr>
-                                    <h5>Nhập tên</h5>
-                                    <div class="form-group">
-                                        <input type="text" id="mem_name" class="form-control" placeholder="Tên nhân viên" aria-label="" aria-describedby="basic-addon1">
-                                    </div>
-                                    <h5>Username</h5>
-                                    <div class="form-group">
-                                        <input type="text" id="mem_username" class="form-control" placeholder="username" aria-label="" aria-describedby="basic-addon1">
-                                    </div>
-                                    <h5>Password</h5>
-                                    <div class="form-group">
-                                        <input type="text" id="mem_pass" class="form-control" placeholder="password" aria-label="" aria-describedby="basic-addon1">
-                                    </div>
-                                    <h5>Phone</h5>
-                                    <div class="form-group">
-                                        <input type="text" id="mem_phone" class="form-control" placeholder="phone number" aria-label="" aria-describedby="basic-addon1">
-                                    </div>
-								 <h5>Nhóm tài khoản</h5>
-                                   <div class="dropdown">
-										<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											Select Role
-										</button>
-										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-											<a class="dropdown-item" href="#">Member</a>
-											<a class="dropdown-item" href="#">Administrator</a>
-											<a class="dropdown-item" href="#">Manager</a>
-										</div>
-									</div>
+                                    <h3 class="card-label">Quản lý người dùng</h3>
+
                                 </div>
-                                
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary font-weight-bold">Add New Member</button>
-            </div>
-        </div>
-    </div>
-</div>
+                                <div class="card-toolbar">
+                                    <!--begin::Dropdown-->
 
 
-								  
-								  
-                              </div>
-                           </div>
-                           <div class="card-body">
-                              <!--begin: Datatable-->
-                              <table class="table table-bordered table-hover table-checkable" id="member_datatable" style="margin-top: 13px !important">
-                                 <thead>
-                                 <tr>
-                                    <th>Tài Khoản</th>
-                                    <th>Họ Tên</th>
-                                    <th>Phone</th>
-                                    <th>Email</th>
-                                    <th>Giới Tính</th>
-									<th>Ngày Sinh</th>
-									<th>Actions</th>
-                                 </tr>
-                                 </thead>
-                              </table>
-                              <!--end: Datatable-->
-                           </div>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addMember">
+                                        Thêm Người Dùng
+                                    </button>
+                                    <!-- Modal-->
+
+
+                                    <div class="modal fade" id="addMember" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Thêm người dùng mới</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <i aria-hidden="true" class="ki ki-close"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="modal-body pd-20 pd-sm-30">
+                                                        <h5 class="tx-18 tx-sm-20 mg-b-20">Add new Member</h5>
+                                                        <hr>
+                                                        <h5>Nhập tên</h5>
+                                                        <div class="form-group">
+                                                            <input type="text" id="mem_name" class="form-control" placeholder="Tên nhân viên" aria-label="" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <h5>Username</h5>
+                                                        <div class="form-group">
+                                                            <input type="text" id="mem_username" class="form-control" placeholder="username" aria-label="" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <h5>Password</h5>
+                                                        <div class="form-group">
+                                                            <input type="password" id="mem_pass" class="form-control" placeholder="password" aria-label="" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <h5>Phone</h5>
+                                                        <div class="form-group">
+                                                            <input type="text" id="mem_phone" class="form-control" placeholder="phone number" aria-label="" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <h5>Nhóm tài khoản</h5>
+                                                        <select id="mem_role" class="browser-default custom-select custom-select-lg mb-3">
+                                                            <option value="" disabled selected>Choose your option</option>
+                                                            <option value="1">Administrator</option>
+                                                            <option value="2">Member</option>
+                                                            <option value="3">Manager</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary font-weight-bold" id="btn_add">Add New Member</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="modal fade" id="editMember" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Edit Member</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <i aria-hidden="true" class="ki ki-close"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="modal-body pd-20 pd-sm-30">
+                                                        <h5 class="tx-18 tx-sm-20 mg-b-20">Edit Member</h5>
+                                                        <hr>
+                                                        <h5>Nhập tên</h5>
+                                                        <div class="form-group">
+                                                            <input type="text" id="name" class="form-control" placeholder="Tên nhân viên" aria-label="" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <h5>Username</h5>
+                                                        <div class="form-group">
+                                                            <input type="text" id="username" class="form-control" placeholder="username" aria-label="" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <h5>Password</h5>
+                                                        <div class="form-group">
+                                                            <input type="password" id="pass" class="form-control" placeholder="password" aria-label="" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <h5>Phone</h5>
+                                                        <div class="form-group">
+                                                            <input type="text" id="phone" class="form-control" placeholder="phone number" aria-label="" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <h5>Nhóm tài khoản</h5>
+                                                        <select id="role" class="browser-default custom-select custom-select-lg mb-3">
+                                                            <option value="" disabled selected>Choose your option</option>
+                                                            <option value="1">Administrator</option>
+                                                            <option value="2">Member</option>
+                                                            <option value="3">Manager</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <input type="hidden" id="member_id" value="0">
+                                                    <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary font-weight-bold" id="btn_save">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <!--begin: Datatable-->
+                                <table class="table table-bordered table-hover table-checkable" id="kt_datatable" style="margin-top: 13px !important">
+                                    <thead>
+                                    <tr>
+                                        <th>Tài Khoản</th>
+                                        <th>Họ Tên</th>
+                                        <th>Phone</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                                <!--end: Datatable-->
+                            </div>
                         </div>
-						 
-						 
-						 
-						 
-						 
-						 
-                       						 
+
+
+
+
+
+
+
                         <!--end::Member List-->
-                     </div>
-                     <!--end::Container-->
-                  </div>
-                  <!--end::Entry-->
-               </div>
-               <!--end::Content-->
-               <!--begin::Footer-->
-               <div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
-                  <!--begin::Container-->
-                  <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
-                     <!--begin::Copyright-->
-                     <div class="text-dark order-2 order-md-1">
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Entry-->
+            </div>
+            <!--end::Content-->
+            <!--begin::Footer-->
+            <div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
+                <!--begin::Container-->
+                <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    <!--begin::Copyright-->
+                    <div class="text-dark order-2 order-md-1">
                         <span class="text-muted font-weight-bold mr-2">2020©</span>
                         <a href="https://www.facebook.com/blue.outtatime" target="_blank" class="text-dark-50 text-hover-primary font-weight-bold">Saviart</a>
                         <a class="text-dark-75 text-hover-primary">/</a>
                         <a href="https://www.facebook.com/sofukinez" target="_blank" class="text-dark-50 text-hover-primary font-weight-bold">Ducthinh</a>
-                     </div>
-                     <!--end::Copyright-->
-                     <!--begin::Nav-->
-                     <div class="nav nav-dark">
+                    </div>
+                    <!--end::Copyright-->
+                    <!--begin::Nav-->
+                    <div class="nav nav-dark">
                         <span class="text-muted font-weight-bold mr-2">Contact</span>
                         <a href="https://www.facebook.com/tuananh221114" target="_blank" class="text-dark-50 text-hover-primary font-weight-bold">Quangpm87</a>
-                     </div>
-                     <!--end::Nav-->
-                  </div>
-                  <!--end::Container-->
-               </div>
-               <!--end::Footer-->
+                    </div>
+                    <!--end::Nav-->
+                </div>
+                <!--end::Container-->
             </div>
-            <!--end::Wrapper-->
-         </div>
-         <!--end::Page-->
-      </div>
-      <!--end::Main-->
-      <!-- begin::User Panel-->
-      <div id="kt_quick_user" class="offcanvas offcanvas-right p-10">
-         <!--begin::Header-->
-         <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
-            <h3 class="font-weight-bold m-0">User Profile</h3>
-            <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
+            <!--end::Footer-->
+        </div>
+        <!--end::Wrapper-->
+    </div>
+    <!--end::Page-->
+</div>
+<!--end::Main-->
+<!-- begin::User Panel-->
+<div id="kt_quick_user" class="offcanvas offcanvas-right p-10">
+    <!--begin::Header-->
+    <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
+        <h3 class="font-weight-bold m-0">User Profile</h3>
+        <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
             <i class="ki ki-close icon-xs text-muted"></i>
-            </a>
-         </div>
-         <!--end::Header-->
-         <!--begin::Content-->
-         <div class="offcanvas-content pr-5 mr-n5">
-            <!--begin::Header-->
-            <div class="d-flex align-items-center mt-5">
-               <div class="symbol symbol-100 mr-5">
-                  <div class="symbol-label" style="background-image:url('assets/media/users/saviart.jpg')"></div>
-                  <i class="symbol-badge bg-success"></i>
-               </div>
-               <div class="d-flex flex-column">
-                  <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">Saviart</a>
-                  <div class="text-muted mt-1">Administrator</div>
-                  <div class="navi mt-2">
-                     <a href="#" class="navi-item">
+        </a>
+    </div>
+    <!--end::Header-->
+    <!--begin::Content-->
+    <div class="offcanvas-content pr-5 mr-n5">
+        <!--begin::Header-->
+        <div class="d-flex align-items-center mt-5">
+            <div class="symbol symbol-100 mr-5">
+                <div class="symbol-label" style="background-image:url('assets/media/users/saviart.jpg')"></div>
+                <i class="symbol-badge bg-success"></i>
+            </div>
+            <div class="d-flex flex-column">
+                <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">Saviart</a>
+                <div class="text-muted mt-1">Administrator</div>
+                <div class="navi mt-2">
+                    <a href="#" class="navi-item">
                         <span class="navi-link p-0 pb-2">
                            <span class="navi-icon mr-1">
                               <span class="svg-icon svg-icon-lg svg-icon-primary">
@@ -567,174 +610,30 @@
                                        <circle fill="#000000" opacity="0.3" cx="19.5" cy="17.5" r="2.5" />
                                     </g>
                                  </svg>
-                                 <!--end::Svg Icon-->
+                                  <!--end::Svg Icon-->
                               </span>
                            </span>
                            <span class="navi-text text-muted text-hover-primary">quangson1909@gmail.com</span>
                         </span>
-                     </a>
-                     <a href="#" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
-                  </div>
-               </div>
+                    </a>
+                    <a href="#" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+                </div>
             </div>
-            <!--end::Header-->
-            <!--begin::Separator-->
-            <div class="separator separator-dashed mt-8 mb-5"></div>
-            <!--end::Separator-->
-            <!--begin::Nav-->
-            <div class="navi navi-spacer-x-0 p-0">
-            </div>
-            <!--end::Nav-->
-         </div>
-         <!--end::Content-->
-      </div>
-      <!-- end::User Panel-->
-      <!--begin::Quick Panel-->
-      <div id="kt_quick_panel" class="offcanvas offcanvas-right pt-5 pb-10" style="background: #072A5A" >
-         <!--begin::Header-->
-         <div class="offcanvas-header offcanvas-header-navs d-flex align-items-center justify-content-between mb-5">
-            <ul class="nav nav-bold nav-tabs nav-tabs-line nav-tabs-line-3x nav-tabs-primary flex-grow-1 px-10" role="tablist">
-               <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" >Tình Hình Đồng Bọn</a>
-               </li>
-            </ul>
-            <div class="offcanvas-close mt-n1 pr-5" >
-               <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_panel_close">
-               <i class="ki ki-close icon-xs text-muted"></i>
-               </a>
-            </div>
-         </div>
-         <!--end::Header-->
-         <!--begin::Content-->
-         <div class="offcanvas-content px-5" style ="background: #1e1e2d">
-            <div class="tab-content">
-               <!--begin::Tabpane-->
-               <div class="tab-pane fade show pt-5 pr-5 mr-n5 active" id="kt_quick_panel_logs" role="tabpanel" >
-                  <!--begin::Section-->
-                  <div class="mb-10">
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">QuangDiep555stydgdgdgddggsgddggdd</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 10:22:04</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi111sjsdgdgk</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 10:30:06</span>
-                        </div>
-
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+200</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">Clickerbduaa9vji</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:44:44</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+1</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">QuangDiep111v544ffgdfdf</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:44:44</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">Clickera293hlit8dp</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_BlockPuzzle</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:37:48</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+1</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">HaNguyen6666Hydro6yfyfyfgu</span>
-                           <span class="text-muted font-size-sm">Sonic</span>
-                           <span class="text-muted font-size-sm">TheNB_Hexagon</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:28:28</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+2400</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi333cbchdhgda</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:28:19</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi222sffahfahsfjtaj</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:28:10</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">QuangDiep111vsshehehshheehhe</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:25:46</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+100</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi444hhhd</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:23:08</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+432</span>
-                     </div>
-                     <!--end: Item-->
-                  </div>
-                  <!--end::Section-->
-               </div>
-               <!--end::Tabpane-->
-            </div>
-         </div>
-         <!--end::Content-->
-      </div>
-      <!--end::Quick Panel-->
-      <!--begin::Scrolltop-->
-      <div id="kt_scrolltop" class="scrolltop">
+        </div>
+        <!--end::Header-->
+        <!--begin::Separator-->
+        <div class="separator separator-dashed mt-8 mb-5"></div>
+        <!--end::Separator-->
+        <!--begin::Nav-->
+        <div class="navi navi-spacer-x-0 p-0">
+        </div>
+        <!--end::Nav-->
+    </div>
+    <!--end::Content-->
+</div>
+<!-- end::User Panel-->
+<!--begin::Scrolltop-->
+<div id="kt_scrolltop" class="scrolltop">
          <span class="svg-icon">
             <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg-->
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -744,454 +643,26 @@
                   <path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-rule="nonzero" />
                </g>
             </svg>
-            <!--end::Svg Icon-->
+             <!--end::Svg Icon-->
          </span>
-      </div>
-      <!--end::Scrolltop-->
-      <!--end::Demo Panel-->
-      <!--begin::Global Theme Bundle(used by all pages)-->
-      <script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
-      <script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
-      <script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
-      <!--end::Global Theme Bundle-->
-      <!--begin::Page Vendors(used by this page)-->
-      <script src="assets/plugins/custom/flot/flot.bundle.js?v=7.0.5"></script>
-      <!--end::Page Vendors-->
-      <script src="lib/chart.js/Chart.bundle.min.js"></script>
-      <script>
-         var ctxColor1 ="#187de4";
-         var ctxColor2 = "#f64e60";
-         
-         var ctxLabel = [
-         	"1/6",
-         	"2/6",
-         	"3/6",
-         	"4/6",
-         	"5/6",
-         	"6/6",
-         	"7/6",
-         	"8/6",
-         	"9/6",
-         	"10/6",
-         	"11/6",
-         	"12/6",
-         	"13/6",
-         	"14/6",
-         	"15/6",
-         	"16/6",
-         	"17/6",
-         	"18/6",
-         	"19/6",
-         	"20/6",
-         	"21/6",
-         	"22/6",
-         	"23/6",
-         	"24/6",
-         	"25/6",
-         	"26/6",
-         	"27/6",
-         	"28/6",
-         	"29/6",
-         	"30/6",
-         ]; //Ngày tháng
-         var data1 = [127, 125, 143, 154, 131, 166, 180, 175, 168, 184, 204, 41.66, 161, 191, 172, 192, 169, 157, 153, 147, 127.2, 48, 47, 55, 63, 66, 0, 0, 0, 0];
-         var data2 = [2208, 1661, 1848, 1800, 1630, 1985, 2250, 2133, 2321, 2041, 1060, 1445, 1736, 2073, 1845, 1728, 1987, 1967, 1467, 1988, 1496, 1341, 1397, 656, 1101, 1223, 0, 0, 0, 0];
-         
-         
-         var randomScalingFactor = function () {
-          return (Math.random() > 0.5 ? 1.0 : 1.0) * Math.round(Math.random() * 100);
-         };
-         
-         // draws a rectangle with a rounded top
-         Chart.helpers.drawRoundedTopRectangle = function (
-          ctx,
-          x,
-          y,
-          width,
-          height,
-          radius
-         ) {
-          ctx.beginPath();
-          ctx.moveTo(x + radius, y);
-          // top right corner
-          ctx.lineTo(x + width - radius, y);
-          ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
-          // bottom right	corner
-          ctx.lineTo(x + width, y + height);
-          // bottom left corner
-          ctx.lineTo(x, y + height);
-          // top left
-          ctx.lineTo(x, y + radius);
-          ctx.quadraticCurveTo(x, y, x + radius, y);
-          ctx.closePath();
-         };
-         
-         Chart.elements.RoundedTopRectangle = Chart.elements.Rectangle.extend({
-          draw: function () {
-            var ctx = this._chart.ctx;
-            var vm = this._view;
-            var left, right, top, bottom, signX, signY, borderSkipped;
-            var borderWidth = vm.borderWidth;
-         
-            if (!vm.horizontal) {
-              // bar
-              left = vm.x - vm.width / 2;
-              right = vm.x + vm.width / 2;
-              top = vm.y;
-              bottom = vm.base;
-              signX = 1;
-              signY = bottom > top ? 1 : -1;
-              borderSkipped = vm.borderSkipped || "bottom";
-            } else {
-              // horizontal bar
-              left = vm.base;
-              right = vm.x;
-              top = vm.y - vm.height / 2;
-              bottom = vm.y + vm.height / 2;
-              signX = right > left ? 1 : -1;
-              signY = 1;
-              borderSkipped = vm.borderSkipped || "left";
-            }
-         
-            // Canvas doesn't allow us to stroke inside the width so we can
-            // adjust the sizes to fit if we're setting a stroke on the line
-            if (borderWidth) {
-              // borderWidth shold be less than bar width and bar height.
-              var barSize = Math.min(Math.abs(left - right), Math.abs(top - bottom));
-              borderWidth = borderWidth > barSize ? barSize : borderWidth;
-              var halfStroke = borderWidth / 2;
-              // Adjust borderWidth when bar top position is near vm.base(zero).
-              var borderLeft =
-                left + (borderSkipped !== "left" ? halfStroke * signX : 0);
-              var borderRight =
-                right + (borderSkipped !== "right" ? -halfStroke * signX : 0);
-              var borderTop = top + (borderSkipped !== "top" ? halfStroke * signY : 0);
-              var borderBottom =
-                bottom + (borderSkipped !== "bottom" ? -halfStroke * signY : 0);
-              // not become a vertical line?
-              if (borderLeft !== borderRight) {
-                top = borderTop;
-                bottom = borderBottom;
-              }
-              // not become a horizontal line?
-              if (borderTop !== borderBottom) {
-                left = borderLeft;
-                right = borderRight;
-              }
-            }
-         
-            // calculate the bar width and roundess
-            var barWidth = Math.abs(left - right);
-            var roundness = this._chart.config.options.barRoundness || 0.5;
-            var radius = barWidth * roundness * 1;
-         
-            // keep track of the original top of the bar
-            var prevTop = top;
-         
-            // move the top down so there is room to draw the rounded top
-            top = prevTop + radius;
-            var barRadius = top - prevTop;
-         
-            ctx.beginPath();
-            ctx.fillStyle = vm.backgroundColor;
-            ctx.strokeStyle = vm.borderColor;
-            ctx.lineWidth = borderWidth;
-         
-            // draw the rounded top rectangle
-            Chart.helpers.drawRoundedTopRectangle(
-              ctx,
-              left,
-              top - barRadius + 1,
-              barWidth,
-              bottom - prevTop,
-              barRadius
-            );
-         
-            ctx.fill();
-            if (borderWidth) {
-              ctx.stroke();
-            }
-         
-            // restore the original top value so tooltips and scales still work
-            top = prevTop;
-          }
-         });
-         
-         Chart.defaults.roundedBar = Chart.helpers.clone(Chart.defaults.bar);
-         
-         Chart.controllers.roundedBar = Chart.controllers.bar.extend({
-          dataElementType: Chart.elements.RoundedTopRectangle
-         });
-         
-         
-         
-         
-         var barDataset = {
-         	type: "roundedBar",
-         	label: "Thu Nhập",
-         	yAxisID: "y-axis-1",
-         	data: data1,
-         	backgroundColor: ctxColor1,
-         	borderColor: ctxColor1,
-         	borderWidth: .5,
-         	
-         };
-         //data thu nhập
-         
-         var dataset = [];
-         dataset.push(barDataset);
-         //đẩy data vào mảng dataset
-         
-         
-         var lineDataset = {
-         	type: "line",
-         	label: "Account",
-         	yAxisID: "y-axis-2",
-         	data: data2,
-         	backgroundColor: ctxColor2,
-         	borderColor: ctxColor2,
-         	fill: false,
-         	borderWidth: 2,
-         };
-         //data số tài khoản
-         
-         dataset.push(lineDataset);
-         
-         //đẩy data vào mảng dataset
-         
-         console.log(dataset);
-         //in console ra mảng để kiểm tra cho dễ
-         
-         var ctx1 = document.getElementById("chart1").getContext("2d");
-         new Chart(ctx1, {
-         	type: "roundedBar",
-         	data: {
-         		labels: ctxLabel,
-         		datasets: dataset,
-         	},
-         	options: {
-         		legend: {
-         			display: false,
-         		},
-         		scales: {
-         			yAxes: [
-         				{
-         					id: "y-axis-1",
-         					position: "left",
-         					type: "linear",
-         					ticks: {
-         						beginAtZero: true,
-         					},
-         				},
-         				{
-         					id: "y-axis-2",
-         					gridLines: {
-         						color: "rgba(0, 0, 0, 0)",
-         					},
-         					position: "right",
-         					type: "linear",
-         					ticks: {
-         						beginAtZero: true,
-         					},
-         				},
-         			],
-         			xAxes: [
-         				{
-         					gridLines: {
-         						display: true,
-         					},
-         					scaleLabel: {
-         						display: true,
-         					},
-         				},
-         			],
-         		},
-         	},
-         });
-         
-         
-         
-      </script>
-      <script>
-         var ctxLabel = [
-             "1/6",
-             "2/6",
-             "3/6",
-             "4/6",
-             "5/6",
-             "6/6",
-             "7/6",
-             "8/6",
-             "9/6",
-             "10/6",
-             "11/6",
-             "12/6",
-             "13/6",
-             "14/6",
-             "15/6",
-             "16/6",
-             "17/6",
-             "18/6",
-             "19/6",
-             "20/6",
-             "21/6",
-             "22/6",
-             "23/6",
-             "24/6",
-             "25/6",
-             "26/6",
-             "27/6",
-             "28/6",
-             "29/6",
-             "30/6",
-         ]; //Ngày tháng
-         var ctxapp1 = [20, 60, 50, 45, 50, 60, 70, 40, 45, 35, 25, 30, 40, 20, 30, 10, 22.5, 55.4, 33.2, 75.8, 45.2, 32.1, 20, 30.8, 50, 0, 0, 0, 0, 0];
-         var ctxapp2 = [20, 30, 60, 40, 60, 102, 95, 45, 130, 80, 95, 70, 20, 10, 64, 23, 43, 23, 66, 21, 77, 88, 22, 66, 0, 0, 0, 0, 0, 0];
-         var ctxapp3 = [10, 40, 30, 40, 40, 5, 23, 55, 40, 40, 5, 70, 20, 10, 64, 23, 43, 23, 65, 22, 77, 88, 22, 56, 0, 0, 0, 0, 0, 0];
-         
-         var ctxColor1 = "#1B283F";
-         var ctxColor2 = "#FFA800";
-         var ctxColor3 = "#34a8eb";
-         var ctxColor4 = "#8950FC";
-         var ctxColor5 = "#F64E60";
-         
-         
-         var ctx3 = document.getElementById("chart2").getContext("2d");
-         new Chart(ctx3, {
-             type: "bar",
-             data: {
-                 labels: ctxLabel,
-                 datasets: [
-                     {
-                         data: ctxapp1,
-                         label: "Hexagon",
-                         backgroundColor: ctxColor1,
-                     },
-                     {
-                         data: ctxapp2,
-                         label: "NinjaWarrior",
-                         backgroundColor: ctxColor2,
-                     },
-                     {
-                         data: ctxapp3,
-                         label: "DragonShadow",
-                         backgroundColor: ctxColor3,
-                     },
-                 ],
-             },
-             options: {
-                 maintainAspectRatio: false,
-                 responsive: true,
-                 legend: {
-                     display: true,
-                     labels: {
-                         display: false,
-                     },
-                 },
-                 scales: {
-                     yAxes: [
-                         {
-                             stacked: true,
-                             gridLines: {
-                                 color: "#e5e9f2",
-                             },
-                             ticks: {
-                                 beginAtZero: true,
-                                 fontSize: 10,
-                                 fontColor: "#182b49",
-                             },
-                         },
-                     ],
-                     xAxes: [
-                         {
-                             stacked: true,
-                             gridLines: {
-                                 display: false,
-                             },
-                             barPercentage: 0.6,
-                             ticks: {
-                                 beginAtZero: true,
-                                 fontSize: 11,
-                                 fontColor: "#182b49",
-                             },
-                         },
-                     ],
-                 },
-             },
-         });
-      </script>
-      <script>
-         /** PIE CHART **/
-         var ctx = document.getElementById("chartDonut");
-         var myChart = new Chart(ctx, {
-         type: "doughnut",
-         data: {
-         labels: ["Tapjoy", "Sonic", "Fyber", "Other"],
-         datasets: [
-         {
-         label: "",
-         data: [316, 85, 500,100],
-         backgroundColor: ["#F64E60", "#3699FF", "#1BC5BD" , "#9A69FB"]
-         }
-         ]
-         },
-         options: {
-         tooltips: {
-         enabled: true,
-         mode: "single",
-         callbacks: {
-         label: function (tooltipItems, data) {
-         return (
-         data.labels[tooltipItems.index] +
-         data.datasets[tooltipItems.datasetIndex].label +
-         ": " +
-         "$" +
-         data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index]
-         );
-         }
-         }
-         },
-         legend: {
-         position: "bottom"
-         }
-         
-         }
-         });
-         
-      </script>
-	   <script>
-      $(function(){
-       
-        var dateFormat = 'mm/dd/yy',
-        from = $('#dateFrom')
-        .datepicker({
-          defaultDate: '+1w',
-          numberOfMonths: 1
-        })
-        .on('change', function() {
-          to.datepicker('option','minDate', getDate( this ) );
-        }),
-        to = $('#dateTo').datepicker({
-          defaultDate: '+1w',
-          numberOfMonths: 1
-        })
-        .on('change', function() {
-          from.datepicker('option','maxDate', getDate( this ) );
-        });
+</div>
+<!--end::Scrolltop-->
+<!--end::Demo Panel-->
+<!--begin::Global Theme Bundle(used by all pages)-->
+<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
 
-        function getDate( element ) {
-          var date;
-          try {
-            date = $.datepicker.parseDate( dateFormat, element.value );
-          } catch( error ) {
-            date = null;
-          }
 
-          return date;
-        }
+<script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
+<script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
+<script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
+<!--end::Global Theme Bundle-->
+<!--begin::Page Vendors(used by this page)-->
+<script src="assets/plugins/custom/flot/flot.bundle.js?v=7.0.5"></script>
+<!--end::Page Vendors-->
+<script src="lib/chart.js/Chart.bundle.min.js"></script>
 
-      });
-    </script>
-   </body>
-   <!--end::Body-->
+<script src="assets/plugins/custom/datatables/datatables.bundle.js?v=7.0.5"></script>
+<script src="assets/js/pages/crud/datatables/data-sources/member.js?v=7.0.5"></script>
+</body>
+<!--end::Body-->
 </html>
