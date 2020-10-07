@@ -399,9 +399,108 @@
                      <div class="container-fluid">
                         <!--begin::History-->
                       
+						<div class="row">
+                            <div class="col-xl-6">
+                              <div class="card">
+													<div class="card-header d-flex align-items-center justify-content-between">
+															<h6 class="mg-b-0">Chất Lượng Công Việc</h6>
+														<div class="btn-group" align="center">
+                                                <button class="btn btn-xs btn-white btn-uppercase active">Today</button>
+                                                <button class="btn btn-xs btn-white btn-uppercase">This Week</button>
+                                                <button class="btn btn-xs btn-white btn-uppercase ">This Month</button>
+                                            </div>
+															
+														</div>
+													<div class="card-body">
+														<!-- df-example -->
+														<div class="chart-seventeen">
+															<canvas id="chart1" height="200"></canvas>
+														</div>
+													</div>
+													<!-- card-body -->
+
+													<!-- card-footer -->
+												</div>
+
+                            </div>
+							 <div class="col-xl-6">
+                              <div class="card">
+													<div class="card-header d-flex align-items-center justify-content-between">
+															<h6 class="mg-b-0">Chất Lượng Công Việc</h6>
+														<div class="btn-group" align="center">
+                                                <button class="btn btn-xs btn-white btn-uppercase active">Today</button>
+                                                <button class="btn btn-xs btn-white btn-uppercase">This Week</button>
+                                                <button class="btn btn-xs btn-white btn-uppercase ">This Month</button>
+                                            </div>
+															
+														</div>
+													<div class="card-body">
+														<!-- df-example -->
+														<div class="chart-seventeen">
+															<canvas id="chart2" height="200"></canvas>
+														</div>
+													</div>
+													<!-- card-body -->
+
+													<!-- card-footer -->
+												</div>
+                            </div>
+                            
+
+                        </div> 
 						 
-						 
-						 
+						 <div class="row">
+                           <div class="col-xl-12" style="margin-top: 20px !important">
+							 
+							 <div class="card card-custom">
+                           <div class="card-header">
+                              <div class="card-title">
+											<span class="card-icon">
+												<i class="flaticon2-supermarket text-primary"></i>
+											</span>
+                                 <h3 class="card-label">Lịch Sử Trả Điểm</h3>
+                                 
+                              </div>
+							   <div class="card-toolbar">
+                                            <div data-label="datepick">
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <input type="text" id="dateFrom" class="form-control" placeholder="From">
+                                                    </div><!-- col -->
+                                                    <div class="col-4" >
+                                                        <input type="text" id="dateTo" class="form-control" placeholder="To">
+                                                    </div><!-- col -->
+
+
+                                                    <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" id="submit">Submit</button>
+
+
+
+                                                </div><!-- row -->
+
+
+                                            </div>
+                                        </div>
+                              
+                           </div>
+                           <div class="card-body">
+                              <!--begin: Datatable-->
+                              <table class="table table-bordered table-hover table-checkable" id="kt_datatable" style="margin-top: 13px !important">
+                                 <thead>
+                                 <tr>
+                                    <th>Nhân Viên</th>
+                                    <th>Tapjoy</th>
+                                    <th>Sonic</th>
+                                    <th>Fyber</th>
+                                 	<th>Other</th>
+                                 </tr>
+                                 </thead>
+                              </table>
+                              <!--end: Datatable-->
+                           </div>
+                        </div>
+							 </div> 
+                        </div> 
 						 
 						 
 						 
@@ -666,408 +765,9 @@
       <script src="assets/plugins/custom/flot/flot.bundle.js?v=7.0.5"></script>
       <!--end::Page Vendors-->
       <script src="lib/chart.js/Chart.bundle.min.js"></script>
-      <script>
-         var ctxColor1 ="#187de4";
-         var ctxColor2 = "#f64e60";
-         
-         var ctxLabel = [
-         	"1/6",
-         	"2/6",
-         	"3/6",
-         	"4/6",
-         	"5/6",
-         	"6/6",
-         	"7/6",
-         	"8/6",
-         	"9/6",
-         	"10/6",
-         	"11/6",
-         	"12/6",
-         	"13/6",
-         	"14/6",
-         	"15/6",
-         	"16/6",
-         	"17/6",
-         	"18/6",
-         	"19/6",
-         	"20/6",
-         	"21/6",
-         	"22/6",
-         	"23/6",
-         	"24/6",
-         	"25/6",
-         	"26/6",
-         	"27/6",
-         	"28/6",
-         	"29/6",
-         	"30/6",
-         ]; //Ngày tháng
-         var data1 = [127, 125, 143, 154, 131, 166, 180, 175, 168, 184, 204, 41.66, 161, 191, 172, 192, 169, 157, 153, 147, 127.2, 48, 47, 55, 63, 66, 0, 0, 0, 0];
-         var data2 = [2208, 1661, 1848, 1800, 1630, 1985, 2250, 2133, 2321, 2041, 1060, 1445, 1736, 2073, 1845, 1728, 1987, 1967, 1467, 1988, 1496, 1341, 1397, 656, 1101, 1223, 0, 0, 0, 0];
-         
-         
-         var randomScalingFactor = function () {
-          return (Math.random() > 0.5 ? 1.0 : 1.0) * Math.round(Math.random() * 100);
-         };
-         
-         // draws a rectangle with a rounded top
-         Chart.helpers.drawRoundedTopRectangle = function (
-          ctx,
-          x,
-          y,
-          width,
-          height,
-          radius
-         ) {
-          ctx.beginPath();
-          ctx.moveTo(x + radius, y);
-          // top right corner
-          ctx.lineTo(x + width - radius, y);
-          ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
-          // bottom right	corner
-          ctx.lineTo(x + width, y + height);
-          // bottom left corner
-          ctx.lineTo(x, y + height);
-          // top left
-          ctx.lineTo(x, y + radius);
-          ctx.quadraticCurveTo(x, y, x + radius, y);
-          ctx.closePath();
-         };
-         
-         Chart.elements.RoundedTopRectangle = Chart.elements.Rectangle.extend({
-          draw: function () {
-            var ctx = this._chart.ctx;
-            var vm = this._view;
-            var left, right, top, bottom, signX, signY, borderSkipped;
-            var borderWidth = vm.borderWidth;
-         
-            if (!vm.horizontal) {
-              // bar
-              left = vm.x - vm.width / 2;
-              right = vm.x + vm.width / 2;
-              top = vm.y;
-              bottom = vm.base;
-              signX = 1;
-              signY = bottom > top ? 1 : -1;
-              borderSkipped = vm.borderSkipped || "bottom";
-            } else {
-              // horizontal bar
-              left = vm.base;
-              right = vm.x;
-              top = vm.y - vm.height / 2;
-              bottom = vm.y + vm.height / 2;
-              signX = right > left ? 1 : -1;
-              signY = 1;
-              borderSkipped = vm.borderSkipped || "left";
-            }
-         
-            // Canvas doesn't allow us to stroke inside the width so we can
-            // adjust the sizes to fit if we're setting a stroke on the line
-            if (borderWidth) {
-              // borderWidth shold be less than bar width and bar height.
-              var barSize = Math.min(Math.abs(left - right), Math.abs(top - bottom));
-              borderWidth = borderWidth > barSize ? barSize : borderWidth;
-              var halfStroke = borderWidth / 2;
-              // Adjust borderWidth when bar top position is near vm.base(zero).
-              var borderLeft =
-                left + (borderSkipped !== "left" ? halfStroke * signX : 0);
-              var borderRight =
-                right + (borderSkipped !== "right" ? -halfStroke * signX : 0);
-              var borderTop = top + (borderSkipped !== "top" ? halfStroke * signY : 0);
-              var borderBottom =
-                bottom + (borderSkipped !== "bottom" ? -halfStroke * signY : 0);
-              // not become a vertical line?
-              if (borderLeft !== borderRight) {
-                top = borderTop;
-                bottom = borderBottom;
-              }
-              // not become a horizontal line?
-              if (borderTop !== borderBottom) {
-                left = borderLeft;
-                right = borderRight;
-              }
-            }
-         
-            // calculate the bar width and roundess
-            var barWidth = Math.abs(left - right);
-            var roundness = this._chart.config.options.barRoundness || 0.5;
-            var radius = barWidth * roundness * 1;
-         
-            // keep track of the original top of the bar
-            var prevTop = top;
-         
-            // move the top down so there is room to draw the rounded top
-            top = prevTop + radius;
-            var barRadius = top - prevTop;
-         
-            ctx.beginPath();
-            ctx.fillStyle = vm.backgroundColor;
-            ctx.strokeStyle = vm.borderColor;
-            ctx.lineWidth = borderWidth;
-         
-            // draw the rounded top rectangle
-            Chart.helpers.drawRoundedTopRectangle(
-              ctx,
-              left,
-              top - barRadius + 1,
-              barWidth,
-              bottom - prevTop,
-              barRadius
-            );
-         
-            ctx.fill();
-            if (borderWidth) {
-              ctx.stroke();
-            }
-         
-            // restore the original top value so tooltips and scales still work
-            top = prevTop;
-          }
-         });
-         
-         Chart.defaults.roundedBar = Chart.helpers.clone(Chart.defaults.bar);
-         
-         Chart.controllers.roundedBar = Chart.controllers.bar.extend({
-          dataElementType: Chart.elements.RoundedTopRectangle
-         });
-         
-         
-         
-         
-         var barDataset = {
-         	type: "roundedBar",
-         	label: "Thu Nhập",
-         	yAxisID: "y-axis-1",
-         	data: data1,
-         	backgroundColor: ctxColor1,
-         	borderColor: ctxColor1,
-         	borderWidth: .5,
-         	
-         };
-         //data thu nhập
-         
-         var dataset = [];
-         dataset.push(barDataset);
-         //đẩy data vào mảng dataset
-         
-         
-         var lineDataset = {
-         	type: "line",
-         	label: "Account",
-         	yAxisID: "y-axis-2",
-         	data: data2,
-         	backgroundColor: ctxColor2,
-         	borderColor: ctxColor2,
-         	fill: false,
-         	borderWidth: 2,
-         };
-         //data số tài khoản
-         
-         dataset.push(lineDataset);
-         
-         //đẩy data vào mảng dataset
-         
-         console.log(dataset);
-         //in console ra mảng để kiểm tra cho dễ
-         
-         var ctx1 = document.getElementById("chart1").getContext("2d");
-         new Chart(ctx1, {
-         	type: "roundedBar",
-         	data: {
-         		labels: ctxLabel,
-         		datasets: dataset,
-         	},
-         	options: {
-         		legend: {
-         			display: false,
-         		},
-         		scales: {
-         			yAxes: [
-         				{
-         					id: "y-axis-1",
-         					position: "left",
-         					type: "linear",
-         					ticks: {
-         						beginAtZero: true,
-         					},
-         				},
-         				{
-         					id: "y-axis-2",
-         					gridLines: {
-         						color: "rgba(0, 0, 0, 0)",
-         					},
-         					position: "right",
-         					type: "linear",
-         					ticks: {
-         						beginAtZero: true,
-         					},
-         				},
-         			],
-         			xAxes: [
-         				{
-         					gridLines: {
-         						display: true,
-         					},
-         					scaleLabel: {
-         						display: true,
-         					},
-         				},
-         			],
-         		},
-         	},
-         });
-         
-         
-         
-      </script>
-      <script>
-         var ctxLabel = [
-             "1/6",
-             "2/6",
-             "3/6",
-             "4/6",
-             "5/6",
-             "6/6",
-             "7/6",
-             "8/6",
-             "9/6",
-             "10/6",
-             "11/6",
-             "12/6",
-             "13/6",
-             "14/6",
-             "15/6",
-             "16/6",
-             "17/6",
-             "18/6",
-             "19/6",
-             "20/6",
-             "21/6",
-             "22/6",
-             "23/6",
-             "24/6",
-             "25/6",
-             "26/6",
-             "27/6",
-             "28/6",
-             "29/6",
-             "30/6",
-         ]; //Ngày tháng
-         var ctxapp1 = [20, 60, 50, 45, 50, 60, 70, 40, 45, 35, 25, 30, 40, 20, 30, 10, 22.5, 55.4, 33.2, 75.8, 45.2, 32.1, 20, 30.8, 50, 0, 0, 0, 0, 0];
-         var ctxapp2 = [20, 30, 60, 40, 60, 102, 95, 45, 130, 80, 95, 70, 20, 10, 64, 23, 43, 23, 66, 21, 77, 88, 22, 66, 0, 0, 0, 0, 0, 0];
-         var ctxapp3 = [10, 40, 30, 40, 40, 5, 23, 55, 40, 40, 5, 70, 20, 10, 64, 23, 43, 23, 65, 22, 77, 88, 22, 56, 0, 0, 0, 0, 0, 0];
-         
-         var ctxColor1 = "#1B283F";
-         var ctxColor2 = "#FFA800";
-         var ctxColor3 = "#34a8eb";
-         var ctxColor4 = "#8950FC";
-         var ctxColor5 = "#F64E60";
-         
-         
-         var ctx3 = document.getElementById("chart2").getContext("2d");
-         new Chart(ctx3, {
-             type: "bar",
-             data: {
-                 labels: ctxLabel,
-                 datasets: [
-                     {
-                         data: ctxapp1,
-                         label: "Hexagon",
-                         backgroundColor: ctxColor1,
-                     },
-                     {
-                         data: ctxapp2,
-                         label: "NinjaWarrior",
-                         backgroundColor: ctxColor2,
-                     },
-                     {
-                         data: ctxapp3,
-                         label: "DragonShadow",
-                         backgroundColor: ctxColor3,
-                     },
-                 ],
-             },
-             options: {
-                 maintainAspectRatio: false,
-                 responsive: true,
-                 legend: {
-                     display: true,
-                     labels: {
-                         display: false,
-                     },
-                 },
-                 scales: {
-                     yAxes: [
-                         {
-                             stacked: true,
-                             gridLines: {
-                                 color: "#e5e9f2",
-                             },
-                             ticks: {
-                                 beginAtZero: true,
-                                 fontSize: 10,
-                                 fontColor: "#182b49",
-                             },
-                         },
-                     ],
-                     xAxes: [
-                         {
-                             stacked: true,
-                             gridLines: {
-                                 display: false,
-                             },
-                             barPercentage: 0.6,
-                             ticks: {
-                                 beginAtZero: true,
-                                 fontSize: 11,
-                                 fontColor: "#182b49",
-                             },
-                         },
-                     ],
-                 },
-             },
-         });
-      </script>
-      <script>
-         /** PIE CHART **/
-         var ctx = document.getElementById("chartDonut");
-         var myChart = new Chart(ctx, {
-         type: "doughnut",
-         data: {
-         labels: ["Tapjoy", "Sonic", "Fyber", "Other"],
-         datasets: [
-         {
-         label: "",
-         data: [316, 85, 500,100],
-         backgroundColor: ["#F64E60", "#3699FF", "#1BC5BD" , "#9A69FB"]
-         }
-         ]
-         },
-         options: {
-         tooltips: {
-         enabled: true,
-         mode: "single",
-         callbacks: {
-         label: function (tooltipItems, data) {
-         return (
-         data.labels[tooltipItems.index] +
-         data.datasets[tooltipItems.datasetIndex].label +
-         ": " +
-         "$" +
-         data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index]
-         );
-         }
-         }
-         },
-         legend: {
-         position: "bottom"
-         }
-         
-         }
-         });
-         
-      </script>
-	   <script>
+      
+      	
+		<script>
       $(function(){
        
         var dateFormat = 'mm/dd/yy',
@@ -1100,6 +800,162 @@
 
       });
     </script>
+		
+		
+        <script>
+            // Horizontal bar chart
+
+            var ctxLabel = ["QuangDiep", "VanPhi", "ThanhLong", "ThaiDuong", "BuiTan", "Auto"]; //nhan vien
+            var ctxnetwork1 = [20, 60, 50, 45, 50, 60, 70, 40, 45, 35, 25, 30, 40, 20, 30, 10, 22.5, 55.4, 33.2, 75.8, 45.2, 32.1, 20, 30.8, 50, 0, 0, 0, 0, 0];
+
+            var ctx3 = document.getElementById("chart1").getContext("2d");
+            var gradient1 = ctx3.createLinearGradient(0, 350, 0, 0);
+            gradient1.addColorStop(0, "#001737");
+            gradient1.addColorStop(1, "#0168fa");
+
+            new Chart(ctx3, {
+                type: "horizontalBar",
+                data: {
+                    labels: ctxLabel,
+                    datasets: [
+                        {
+                            data: ctxnetwork1,
+                            backgroundColor: gradient1,
+                        },
+                    ],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    legend: {
+                        display: false,
+                        labels: {
+                            display: false,
+                        },
+                    },
+                    scales: {
+                        yAxes: [
+                            {
+                                gridLines: {
+                                    color: "#e5e9f2",
+                                },
+                                ticks: {
+                                    beginAtZero: true,
+                                    fontSize: 12,
+                                    fontColor: "#182b49",
+                                    max: 80,
+                                },
+                            },
+                        ],
+                        xAxes: [
+                            {
+                                gridLines: {
+                                    display: false,
+                                },
+                                barPercentage: 0.6,
+                                ticks: {
+                                    beginAtZero: true,
+                                    fontSize: 11,
+                                    fontColor: "#182b49",
+                                },
+                            },
+                        ],
+                    },
+                },
+            });
+        </script>
+
+        <script>
+            var ctxLabel = ["QuangDiep", "VanPhi", "ThanhLong", "ThaiDuong", "BuiTan", "Auto"]; //nhan vien
+            var ctxapp1 = [20, 60, 50, 45, 50, 60];
+            var ctxapp2 = [20, 30, 60, 40, 60, 102];
+            var ctxapp3 = [10, 40, 30, 40, 40, 5];
+
+              var ctxColor1 = "#EF5350";
+            var ctxColor2 = "#1ce1ac";
+            var ctxColor3 = "#64B5F6";
+            var ctxColor4 = "#1ce1ac";
+            var ctxColor5 = "#d041e0";
+
+            var ctx3 = document.getElementById("chart2").getContext("2d");
+            new Chart(ctx3, {
+                type: "bar",
+                data: {
+                    labels: ctxLabel,
+                    datasets: [
+                        {
+                            data: ctxapp1,
+                            label: "Tapjoy",
+                            backgroundColor: ctxColor1,
+                        },
+                        {
+                            data: ctxapp2,
+                            label: "Sonic",
+                            backgroundColor: ctxColor2,
+                        },
+                        {
+                            data: ctxapp3,
+                            label: "Other",
+                            backgroundColor: ctxColor3,
+                        },
+                    ],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    legend: {
+                        display: true,
+                        labels: {
+                            display: false,
+                        },
+                    },
+                    scales: {
+                        yAxes: [
+                            {
+                                stacked: true,
+                                gridLines: {
+                                    color: "#e5e9f2",
+                                },
+                                ticks: {
+                                    beginAtZero: true,
+                                    fontSize: 10,
+                                    fontColor: "#182b49",
+                                },
+                            },
+                        ],
+                        xAxes: [
+                            {
+                                stacked: true,
+                                gridLines: {
+                                    display: false,
+                                },
+                                barPercentage: 0.6,
+                                ticks: {
+                                    beginAtZero: true,
+                                    fontSize: 11,
+                                    fontColor: "#182b49",
+                                },
+                            },
+                        ],
+                    },
+                },
+            });
+        </script>
+		<script>
+      $(function(){
+        'use strict'
+
+        $('#tablehistory').DataTable({
+          language: {
+            searchPlaceholder: 'Search...',
+            sSearch: '',
+            lengthMenu: '_MENU_ items/page',
+          }
+        });
+      });
+    </script>
+      
+	   
    </body>
    <!--end::Body-->
 </html>
