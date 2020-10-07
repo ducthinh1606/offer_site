@@ -403,11 +403,19 @@
                               <div class="card">
 													<div class="card-header d-flex align-items-center justify-content-between">
 															<h6 class="mg-b-0">Chất Lượng Công Việc</h6>
-														<div class="btn-group" align="center">
-                                                <button class="btn btn-xs btn-white btn-uppercase active">Today</button>
-                                                <button class="btn btn-xs btn-white btn-uppercase">This Week</button>
-                                                <button class="btn btn-xs btn-white btn-uppercase ">This Month</button>
-                                            </div>
+														<div class="card-toolbar">
+                                            <ul class="nav nav-pills nav-pills-sm nav-dark-75">
+                                                <li class="nav-item">
+                                                    <a class="nav-link py-2 px-4 active" data-toggle="tab" href="#kt_tab_pane_1_1">Month</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_1_2">Week</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_1_3">Day</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 															
 														</div>
 													<div class="card-body">
