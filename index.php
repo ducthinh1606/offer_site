@@ -711,7 +711,7 @@ include ('connect.php');
                 <div class="mb-10" id="result">
                     <!--begin: Item-->
                     <?php
-                    $stmt_now = $conn->prepare("SELECT email, network_name, app_name, datetime, tblHistory.coins FROM tblHistory INNER JOIN tblUsers on tblUsers.id = tblHistory.tblUsers_id INNER JOIN tblApps ON tblHistory.tblApps_id = tblApps.id ORDER BY datetime DESC LIMIT 15");
+                    $stmt_now = $conn->prepare("SELECT email, network_name, app_name, datetime, tblHistory.coins FROM tblHistory INNER JOIN tblUsers on tblUsers.id = tblHistory.tblUsers_id ORDER BY datetime DESC LIMIT 15");
                     $stmt_now->setFetchMode(PDO::FETCH_ASSOC);
                     $stmt_now->execute();
                     $resultNow = $stmt_now->fetchAll();

@@ -1,7 +1,7 @@
 <?php
 include ('connect.php');
 
-$stmt = $conn->prepare("SELECT email, network_name, app_name, datetime, tblHistory.coins FROM tblHistory INNER JOIN tblUsers on tblUsers.id = tblHistory.tblUsers_id INNER JOIN tblApps ON tblHistory.tblApps_id = tblApps.id ORDER BY datetime DESC LIMIT 15");
+$stmt = $conn->prepare("SELECT email, network_name, app_name, datetime, tblHistory.coins FROM tblHistory INNER JOIN tblUsers on tblUsers.id = tblHistory.tblUsers_id ORDER BY datetime DESC LIMIT 15");
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $stmt->execute();
 $result = $stmt->fetchAll();

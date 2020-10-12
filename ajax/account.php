@@ -28,17 +28,17 @@ if($request == 1) {
         );
     }
 
-    $res = $conn->prepare('SELECT COUNT(*) as allcount from tblUsers inner join tblHistory on tblUsers.id = tblHistory.tblUsers_id inner join tblApps on tblHistory.tblApps_id = tblApps.id');
+    $res = $conn->prepare('SELECT COUNT(*) as allcount from tblUsers');
     $res->execute();
     $records = $res->fetch();
     $totalRecords = $records['allcount'];
 
-    $res1 = $conn->prepare("SELECT COUNT(*) as allcount from tblUsers inner join tblHistory on tblUsers.id = tblHistory.tblUsers_id inner join tblApps on tblHistory.tblApps_id = tblApps.id WHERE 1 " . $searchQuery);
+    $res1 = $conn->prepare("SELECT COUNT(*) as allcount from tblUsers WHERE 1 " . $searchQuery);
     $res1->execute($searchArray);
     $records = $res1->fetch();
     $totalRecordwithFilter = $records['allcount'];
 
-    $stmt = $conn->prepare("select tblUsers.id, tblUsers.email, tblUsers.coins, tblUsers.IP, tblUsers.created_at, tblUsers.gaid, tblApps.app_name from tblUsers inner join tblHistory on tblUsers.id = tblHistory.tblUsers_id inner join tblApps on tblHistory.tblApps_id = tblApps.id WHERE 1 " . $searchQuery . " ORDER BY " . $columnName . " " . $columnSortOrder . " LIMIT :limit,:offset");
+    $stmt = $conn->prepare("select tblUsers.id, tblUsers.email, tblUsers.coins, tblUsers.IP, tblUsers.created_at, tblUsers.gaid, tblUsers.app_name from tblUsers WHERE 1 " . $searchQuery . " ORDER BY " . $columnName . " " . $columnSortOrder . " LIMIT :limit,:offset");
 
     foreach($searchArray as $key=>$search){
         $stmt->bindValue(':'.$key, $search,PDO::PARAM_STR);
