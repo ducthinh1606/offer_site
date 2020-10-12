@@ -1043,7 +1043,7 @@ foreach ($resultGetname as $row){
 }
 
 
-$stmt2 = $conn->prepare("SELECT app_name, DAY(datetime) as d, MONTH(datetime) as m, SUM(coins) as total, COUNT(tblhistory.id) as acc FROM `tblHistory` INNER JOIN tblapps on tblhistory.tblapps_id = tblapps.id WHERE MONTH(datetime) = MONTH(CURDATE()) AND YEAR(datetime) = YEAR(CURDATE()) GROUP BY DAY(datetime), tblapps_id");
+$stmt2 = $conn->prepare("SELECT app_name, DAY(datetime) as d, MONTH(datetime) as m, SUM(coins) as total, COUNT(tblHistory.id) as acc FROM `tblHistory` INNER JOIN tblApps on tblHistory.tblApps_id = tblApps.id WHERE MONTH(datetime) = MONTH(CURDATE()) AND YEAR(datetime) = YEAR(CURDATE()) GROUP BY DAY(datetime), tblApps_id");
 $stmt2->setFetchMode(PDO::FETCH_ASSOC);
 $stmt2->execute();
 $resultSet2 = $stmt2->fetchAll();
