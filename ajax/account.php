@@ -13,7 +13,7 @@ if($request == 1) {
     $rowperpage = $_POST['length']; // Rows display per page
     $columnIndex = $_POST['order'][0]['column']; // Column index
     $columnName = $_POST['columns'][$columnIndex]['data']; // Column name
-    $columnSortOrder = $_POST['order'][0]['dir']; // asc or desc
+    $columnSortOrder = $_POST['order'][0]['dir'] == 'asc' ? 'desc' : 'asc'; // asc or desc
     $searchValue = $_POST['search']['value']; // Search value
 
     $searchArray = array();

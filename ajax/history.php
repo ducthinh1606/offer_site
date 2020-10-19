@@ -13,7 +13,7 @@ if($request == 1) {
     $rowperpage = $_POST['length']; // Rows display per page
     $columnIndex = $_POST['order'][0]['column']; // Column index
     $columnName = $_POST['columns'][$columnIndex]['data']; // Column name
-    $columnSortOrder = $_POST['order'][0]['dir']; // asc or desc
+    $columnSortOrder = $_POST['order'][0]['dir'] == 'asc' ? 'desc' : 'asc'; // asc or desc
     $searchValue = $_POST['search']['value']; // Search value
 
     $searchArray = array();
@@ -28,17 +28,17 @@ if($request == 1) {
         );
     }
 
-    $res = $conn->prepare('SELECT COUNT(*) as allcount FROM tblHistory inner join tblUsers on tblHistory.tblUsers_id = tblUsers.id inner join tblApps on tblHistory.tblApps_id = tblApps.id');
+    $res = $conn->prepare('SELECT COUNT(*) as allcount FROM tblHistory inner join tblUsers on tblHistory.tblUsers_id = tblUsers.id');
     $res->execute();
     $records = $res->fetch();
     $totalRecords = $records['allcount'];
 
-    $res1 = $conn->prepare("SELECT COUNT(*) as allcount FROM tblHistory inner join tblUsers on tblHistory.tblUsers_id = tblUsers.id inner join tblApps on tblHistory.tblApps_id = tblApps.id WHERE 1 " . $searchQuery);
+    $res1 = $conn->prepare("SELECT COUNT(*) as allcount FROM tblHistory inner join tblUsers on tblHistory.tblUsers_id = tblUsers.id WHERE 1 " . $searchQuery);
     $res1->execute($searchArray);
     $records = $res1->fetch();
     $totalRecordwithFilter = $records['allcount'];
 
-    $stmt = $conn->prepare("SELECT tblHistory.id, tblHistory.datetime, tblHistory.coins, tblHistory.network_name, tblUsers.gaid, tblUsers.email, tblApps.app_name from tblHistory inner join tblUsers on tblHistory.tblUsers_id = tblUsers.id inner join tblApps on tblHistory.tblApps_id = tblApps.id WHERE 1 " . $searchQuery . " ORDER BY " . $columnName . " " . $columnSortOrder . " LIMIT :limit,:offset");
+    $stmt = $conn->prepare("SELECT tblHistory.id, tblHistory.datetime, tblHistory.coins, tblHistory.network_name, tblUsers.gaid, tblUsers.email, tblUsers.app_name from tblHistory inner join tblUsers on tblHistory.tblUsers_id = tblUsers.id WHERE 1 " . $searchQuery . " ORDER BY " . $columnName . " " . $columnSortOrder . " LIMIT :limit,:offset");
 
     foreach($searchArray as $key=>$search){
         $stmt->bindValue(':'.$key, $search,PDO::PARAM_STR);
