@@ -1,3 +1,13 @@
+<?php
+include ('connect.php');
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    header("location:login.php");
+}elseif ($_SESSION['role'] == 1){
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!--begin::Head-->
@@ -27,6 +37,9 @@
     <link href="assets/css/themes/layout/aside/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+
+    <!--Pusher-->
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -503,8 +516,8 @@
                                                         <select id="role" class="browser-default custom-select custom-select-lg mb-3">
                                                             <option value="" disabled selected>Choose your option</option>
                                                             <option value="1">Administrator</option>
-                                                            <option value="2">Member</option>
-                                                            <option value="3">Manager</option>
+                                                            <option value="2">Manager</option>
+                                                            <option value="3">Member</option>
                                                         </select>
                                                     </div>
 
@@ -527,6 +540,7 @@
                                         <th>Tài Khoản</th>
                                         <th>Họ Tên</th>
                                         <th>Phone</th>
+                                        <th>Role</th>
                                         <th>Actions</th>
                                     </tr>
                                     </thead>
@@ -613,10 +627,10 @@
                                   <!--end::Svg Icon-->
                               </span>
                            </span>
-                           <span class="navi-text text-muted text-hover-primary">quangson1909@gmail.com</span>
+                           <span class="navi-text text-muted text-hover-primary">thinh68869@gmail.com</span>
                         </span>
                     </a>
-                    <a href="#" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+                    <a href="logout.php" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
                 </div>
             </div>
         </div>
@@ -632,6 +646,59 @@
     <!--end::Content-->
 </div>
 <!-- end::User Panel-->
+<div id="kt_quick_panel" class="offcanvas offcanvas-right pt-5 pb-10" style="background: #072A5A" >
+    <!--begin::Header-->
+    <div class="offcanvas-header offcanvas-header-navs d-flex align-items-center justify-content-between mb-5">
+        <ul class="nav nav-bold nav-tabs nav-tabs-line nav-tabs-line-3x nav-tabs-primary flex-grow-1 px-10" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" >Tình Hình Đồng Bọn</a>
+            </li>
+        </ul>
+        <div class="offcanvas-close mt-n1 pr-5" >
+            <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_panel_close">
+                <i class="ki ki-close icon-xs text-muted"></i>
+            </a>
+        </div>
+    </div>
+    <!--end::Header-->
+    <!--begin::Content-->
+    <div class="offcanvas-content px-5" style ="background: #1e1e2d">
+        <div class="tab-content">
+            <!--begin::Tabpane-->
+            <div class="tab-pane fade show pt-5 pr-5 mr-n5 active" id="kt_quick_panel_logs" role="tabpanel" >
+                <!--begin::Section-->
+                <div class="mb-10" id="result">
+                    <!--begin: Item-->
+                    <?php
+                    $stmt_now = $conn->prepare("SELECT email, network_name, app_name, datetime, tblHistory.coins FROM tblHistory INNER JOIN tblUsers on tblUsers.id = tblHistory.tblUsers_id ORDER BY datetime DESC LIMIT 15");
+                    $stmt_now->setFetchMode(PDO::FETCH_ASSOC);
+                    $stmt_now->execute();
+                    $resultNow = $stmt_now->fetchAll();
+
+                    foreach ($resultNow as $row){
+                        ?>
+
+                        <div class="d-flex align-items-center flex-wrap mb-5" >
+                            <div class="d-flex flex-column flex-grow-1 mr-2">
+                                <span  class="font-weight-bold text-success text-hover-primary font-size-sm"><?php echo $row['email'] ?></span>
+                                <span class="text-muted font-size-sm"><?php echo $row['network_name'] ?></span>
+                                <span class="text-muted font-size-sm"><?php echo $row['app_name'] ?></span>
+                                <span class="text-muted font-size-sm"><?php echo $row['datetime'] ?></span>
+                            </div>
+                            <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+<?php echo $row['coins'] ?></span>
+                        </div>
+
+                    <?php }?>
+                    <!--end: Item-->
+
+                </div>
+                <!--end::Section-->
+            </div>
+            <!--end::Tabpane-->
+        </div>
+    </div>
+    <!--end::Content-->
+</div
 <!--begin::Scrolltop-->
 <div id="kt_scrolltop" class="scrolltop">
          <span class="svg-icon">
@@ -663,6 +730,29 @@
 
 <script src="assets/plugins/custom/datatables/datatables.bundle.js?v=7.0.5"></script>
 <script src="assets/js/pages/crud/datatables/data-sources/member.js?v=7.0.5"></script>
+
+<!--real time-->
+<script>
+
+    var pusher = new Pusher('bb65a66741157850c668', {
+        cluster: 'ap1'
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+        $.ajax({url: "ajaxHistory.php", success: function(result){
+                $("#result").html(result);
+            }});
+    });
+</script>
 </body>
 <!--end::Body-->
 </html>
+
+<?php }else{
+    echo "<script language='javascript'>";
+    echo "if(!alert('Vui lòng truy cập bằng tài khoản Admin')){
+    window.location.replace('logout.php');
+}";
+    echo "</script>";
+} ?>

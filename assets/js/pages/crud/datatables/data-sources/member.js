@@ -18,6 +18,7 @@ var KTDatatablesDataSourceAjaxServer = function() {
                 {data: 'username'},
                 {data: 'e_name'},
                 {data: 'phone'},
+                {data: 'e_role'},
                 {data: 'Actions'},
             ]
         });
@@ -65,6 +66,7 @@ var KTDatatablesDataSourceAjaxServer = function() {
                         $('#name').val(response.data.e_name);
                         $('#username').val(response.data.username);
                         $('#phone').val(response.data.phone);
+                        $('#role').val(response.data.e_role);
 
                         table.DataTable().ajax.reload();
                     }else{

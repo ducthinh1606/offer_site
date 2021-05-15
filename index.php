@@ -1,5 +1,12 @@
 <?php
 include ('connect.php');
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    header("location:login.php");
+}elseif ($_SESSION['role'] == 1){
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -321,6 +328,7 @@ include ('connect.php');
             <!--end::Aside Menu-->
         </div>
         <!--end::Aside-->
+
         <!--begin::Wrapper-->
         <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
             <!--begin::Header-->
@@ -667,10 +675,10 @@ include ('connect.php');
                                   <!--end::Svg Icon-->
                               </span>
                            </span>
-                           <span class="navi-text text-muted text-hover-primary">quangson1909@gmail.com</span>
+                           <span class="navi-text text-muted text-hover-primary">thinh68869@gmail.com</span>
                         </span>
                     </a>
-                    <a href="#" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+                    <a href="logout.php" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
                 </div>
             </div>
         </div>
@@ -769,6 +777,7 @@ include ('connect.php');
 <script>
     var ctxColor1 ="#187de4";
     var ctxColor2 = "#f64e60";
+
 
     <?php
 
@@ -1024,6 +1033,44 @@ include ('connect.php');
             },
         },
     });
+
+    Chart.draw();
+    function test() {
+        var from = document.getElementById("dateFrom").value;
+        var to = document.getElementById("dateTo").value;
+        $.ajax({
+            type: "post",
+            url: "ajax/test_ajax.php",
+            data: {
+                'from' : from,
+                'to' : to
+            },
+            success: function (data) {
+                var barDataset = {
+                    type: "roundedBar",
+                    label: "Thu Nhập",
+                    yAxisID: "y-axis-1",
+                    data: data1,
+                    backgroundColor: ctxColor1,
+                    borderColor: ctxColor1,
+                    borderWidth: .5,
+
+                };
+                //data thu nhập
+
+                var dataset = [];
+                dataset.push(barDataset);
+            }
+        });
+        return ctxLabel;
+    }
+
+
+    $("#submit").click(function () {
+        ctxLabel = test();
+        alert(ctxLabel);
+    });
+
 </script>
 
 <?php
@@ -1247,7 +1294,11 @@ foreach ($resultGetname as $row){
 
     });
 </script>
+<script>
 
+</script>
+
+<!--real time-->
 <script>
 
     var pusher = new Pusher('bb65a66741157850c668', {
@@ -1264,3 +1315,11 @@ foreach ($resultGetname as $row){
 </body>
 <!--end::Body-->
 </html>
+
+<?php }else{
+    echo "<script language='javascript'>";
+    echo "if(!alert('Vui lòng truy cập bằng tài khoản Admin')){
+    window.location.replace('logout.php');
+}";
+    echo "</script>";
+} ?>

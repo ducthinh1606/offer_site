@@ -54,10 +54,24 @@ if($request == 1) {
         $deleteButton = "<button class='btn btn-sm btn-clean btn-icon deleteMember' data-id='" . $row['id'] . "'><i class='la la-trash'></i></button>";
 
         $action = $updateButton." ".$deleteButton;
+
+        switch ($row['e_role']){
+            case 1:
+                $row['e_role'] = 'Administrator';
+                break;
+            case 2:
+                $row['e_role'] = 'Manager';
+                break;
+            case 3:
+                $row['e_role'] = 'Member';
+                break;
+        }
+
         $data[] = array(
             "e_name" => $row['e_name'],
             "username" => $row['username'],
             "phone" => $row['phone'],
+            "e_role" => $row['e_role'],
             "Actions" => $action
         );
     }
@@ -115,6 +129,7 @@ if($request == 3){
                     "e_name" => $row['e_name'],
                     "username" => $row['username'],
                     "phone" => $row['phone'],
+                    "e_role" => $row['e_role'],
                 );
             }
 

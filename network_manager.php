@@ -1,3 +1,13 @@
+<?php
+include ('connect.php');
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    header("location:login.php");
+}elseif ($_SESSION['role'] == 1){
+
+?>
 <!DOCTYPE html>
 <html lang="en">
    <!--begin::Head-->
@@ -27,6 +37,9 @@
       <link href="assets/css/themes/layout/aside/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
       <!--end::Layout Themes-->
       <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+
+       <!--Pusher-->
+       <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
    </head>
    <!--end::Head-->
    <!--begin::Body-->
@@ -565,10 +578,10 @@
                                  <!--end::Svg Icon-->
                               </span>
                            </span>
-                           <span class="navi-text text-muted text-hover-primary">quangson1909@gmail.com</span>
+                           <span class="navi-text text-muted text-hover-primary">thinh68869@gmail.com</span>
                         </span>
                      </a>
-                     <a href="#" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+                     <a href="logout.php" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
                   </div>
                </div>
             </div>
@@ -601,129 +614,41 @@
          </div>
          <!--end::Header-->
          <!--begin::Content-->
-         <div class="offcanvas-content px-5" style ="background: #1e1e2d">
-            <div class="tab-content">
-               <!--begin::Tabpane-->
-               <div class="tab-pane fade show pt-5 pr-5 mr-n5 active" id="kt_quick_panel_logs" role="tabpanel" >
-                  <!--begin::Section-->
-                  <div class="mb-10">
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">QuangDiep555stydgdgdgddggsgddggdd</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 10:22:04</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi111sjsdgdgk</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 10:30:06</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+200</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">Clickerbduaa9vji</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:44:44</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+1</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">QuangDiep111v544ffgdfdf</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:44:44</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">Clickera293hlit8dp</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_BlockPuzzle</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:37:48</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+1</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
+          <div class="offcanvas-content px-5" style ="background: #1e1e2d">
+              <div class="tab-content">
+                  <!--begin::Tabpane-->
+                  <div class="tab-pane fade show pt-5 pr-5 mr-n5 active" id="kt_quick_panel_logs" role="tabpanel" >
+                      <!--begin::Section-->
+                      <div class="mb-10" id="result">
+                          <!--begin: Item-->
+                          <?php
+                          $stmt_now = $conn->prepare("SELECT email, network_name, app_name, datetime, tblHistory.coins FROM tblHistory INNER JOIN tblUsers on tblUsers.id = tblHistory.tblUsers_id ORDER BY datetime DESC LIMIT 15");
+                          $stmt_now->setFetchMode(PDO::FETCH_ASSOC);
+                          $stmt_now->execute();
+                          $resultNow = $stmt_now->fetchAll();
 
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">HaNguyen6666Hydro6yfyfyfgu</span>
-                           <span class="text-muted font-size-sm">Sonic</span>
-                           <span class="text-muted font-size-sm">TheNB_Hexagon</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:28:28</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+2400</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi333cbchdhgda</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:28:19</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi222sffahfahsfjtaj</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:28:10</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+60</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">QuangDiep111vsshehehshheehhe</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_MetalShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:25:46</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+100</span>
-                     </div>
-                     <!--end: Item-->
-                     <!--begin: Item-->
-                     <div class="d-flex align-items-center flex-wrap mb-5" >
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                           <span  class="font-weight-bold text-success text-hover-primary font-size-sm">VanPhi444hhhd</span>
-                           <span class="text-muted font-size-sm">Tapjoy</span>
-                           <span class="text-muted font-size-sm">TheNB_TJ_ChickenShooter</span>
-                           <span class="text-muted font-size-sm">2020/10/03 11:23:08</span>
-                        </div>
-                        <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+432</span>
-                     </div>
-                     <!--end: Item-->
+                          foreach ($resultNow as $row){
+                              ?>
+
+                              <div class="d-flex align-items-center flex-wrap mb-5" >
+                                  <div class="d-flex flex-column flex-grow-1 mr-2">
+                                      <span  class="font-weight-bold text-success text-hover-primary font-size-sm"><?php echo $row['email'] ?></span>
+                                      <span class="text-muted font-size-sm"><?php echo $row['network_name'] ?></span>
+                                      <span class="text-muted font-size-sm"><?php echo $row['app_name'] ?></span>
+                                      <span class="text-muted font-size-sm"><?php echo $row['datetime'] ?></span>
+                                  </div>
+                                  <span class="btn btn-sm btn-success btn-shadow font-weight-bolder py-1 my-lg-0 my-2 text-light-50">+<?php echo $row['coins'] ?></span>
+                              </div>
+
+                          <?php }?>
+                          <!--end: Item-->
+
+                      </div>
+                      <!--end::Section-->
                   </div>
-                  <!--end::Section-->
-               </div>
-               <!--end::Tabpane-->
-            </div>
-         </div>
+                  <!--end::Tabpane-->
+              </div>
+          </div>
          <!--end::Content-->
       </div>
       <!--end::Quick Panel-->
@@ -758,6 +683,29 @@
 
       <script src="assets/plugins/custom/datatables/datatables.bundle.js?v=7.0.5"></script>
       <script src="assets/js/pages/crud/datatables/data-sources/network.js?v=7.0.5"></script>
+
+      <!--real time-->
+      <script>
+
+          var pusher = new Pusher('bb65a66741157850c668', {
+              cluster: 'ap1'
+          });
+
+          var channel = pusher.subscribe('my-channel');
+          channel.bind('my-event', function(data) {
+              $.ajax({url: "ajaxHistory.php", success: function(result){
+                      $("#result").html(result);
+                  }});
+          });
+      </script>
    </body>
    <!--end::Body-->
 </html>
+
+<?php }else{
+    echo "<script language='javascript'>";
+    echo "if(!alert('Vui lòng truy cập bằng tài khoản Admin')){
+    window.location.replace('logout.php');
+}";
+    echo "</script>";
+} ?>
